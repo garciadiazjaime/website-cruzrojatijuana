@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="{{ LANGUAGE_CODE }}"{% if LANGUAGE_BIDI %} dir="rtl"{% endif %}>
+{% load pages_tags mezzanine_tags i18n future staticfiles %}
+<head>
+<script type="text/javascript"> if (!window.console) console = {log: function() {}}; </script>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="{% block meta_keywords %}{% endblock %}">
+<meta name="description" content="{% block meta_description %}{% endblock %}">
+<title>{% block meta_title %}{% endblock %}{% if settings.SITE_TITLE %} | {{ settings.SITE_TITLE }}{% endif %}</title>
+<link rel="shortcut icon" href="{% static "img/favicon.ico" %}">
+
+{% ifinstalled mezzanine.blog %}
+<link rel="alternate" type="application/rss+xml" title="RSS" href="{% url "blog_post_feed" "rss" %}">
+<link rel="alternate" type="application/atom+xml" title="Atom" href="{% url "blog_post_feed" "atom" %}">
+{% endifinstalled %}
+
+{% compress css %}
+<link rel="stylesheet" href="{% static "css/bootstrap.css" %}">
+<link rel="stylesheet" href="{% static "css/mezzanine.css" %}">
+<link rel="stylesheet" href="{% static "css/bootstrap-responsive.css" %}">
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" href="{% static "css/rtl.css" %}">
+{% endif %}
+{% ifinstalled cartridge.shop %}
+<link rel="stylesheet" href="{% static "css/cartridge.css" %}">
+{% if LANGUAGE_BIDI %}
+<link rel="stylesheet" href="{% static "css/cartridge.rtl.css" %}">
+{% endif %}
+{% endifinstalled %}
+{% block extra_css %}{% endblock %}
+{% endcompress %}
+
+{% compress js %}
+<script src="{% static "mezzanine/js/"|add:settings.JQUERY_FILENAME %}"></script>
+<script src="{% static "js/bootstrap.js" %}"></script>
+<script src="{% static "js/bootstrap-extras.js" %}"></script>
+{% block extra_js %}{% endblock %}
+{% endcompress %}
+<!--[if lt IE 9]>
+<script src="{% static "js/html5shiv.js" %}"></script>
+<![endif]-->
+
+{% block extra_head %}{% endblock %}
+
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/screen.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/blog.css" />
+	
+	<link rel="stylesheet" href="/static/css/timeline_base.css" />
+	<link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico">
+	<script type="text/javascript" src="/static/js/jquery-1.10.1.min.js"></script>
+	{% if section_data.gral_info.has_cycle == 'true' %}
+	<script type="text/javascript" src="/static/js/jquery.cycle.all.latest.js"></script>
+	{% endif %}
+	{% if section_data.gral_info.has_fancybox == 'true' %}
+	<script type="text/javascript" src="/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	{% endif %}
+	{% if section_data.gral_info.has_timeline == 'true' %}
+	<script src="/static/js/timeline-min.js"></script>
+	<link rel="stylesheet" href="/static/css/timeline.css" />
+	<link rel="stylesheet" href="/static/css/timeline_base.css" />
+	{% endif %}
+	
+	<script type="text/javascript" src="/static/js/extras.js" ></script>
+	<script type="text/javascript" src="/static/js/functions.js" ></script>
+	<script type="text/javascript" src="/static/js/hidden.menu.js" ></script>
+
+</head>
+<body id="{% block body_id %}body{% endblock %}">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-46086170-1', 'cruzrojatijuana.org.mx');
+	  ga('send', 'pageview');
+
+	</script>
+
+	<div id="wrapper" class="{{section_data.gral_info.section}}  {% if lang == 1 %}eng{% endif %} blog_news">
+		<div id="header">
+			<div class="container">
+					<p id="lang"><a href="{{section_data.gral_info.section}}" title="Cambiar idioma a Español" class="{% if lang == 0 %}active{% endif %}">Esp</a>/<a href="{{section_data.gral_info.section_lang}}" title="Change language to English" class="{% if lang == 1 %}active{% endif %}">Eng</a></p><div id="brand"><a href="/{{gral_info.logo_href}}" title="{{gral_info.logo_title}}"><img src="/static/images/logo.png"></a></div><p id="bloque_capacitacion"></p><ul class="social">
+					<li class="facebook first"><a href="https://www.facebook.com/cruzrojadetijuana" title="Síguenos en Facebook" target="_blank"></a></li><li class="twitter"><a href="https://twitter.com/CruzRojaTijuana" title="Seguir a @CruzRojaTijuana" target="_blank"></a></li><li class="youtube"><a href="http://www.youtube.com/user/comunicacionCRT" title="Síguenos en Youtube" target="_blank"></a></li>
+					</ul>
+				</div>
+			<div id="menu_wrapp">
+				<div class="container">
+					<ul class="menu"><li id="m_inicio"><a href="/inicio" title="Inicio"><span>Inicio</span></a></li><li id="m_nosotros" class=" "><a href="/nosotros" title="Nosotros"><span>Nosotros</span></a></li><li id="m_hospital" class=" "><a href="/hospital" title="Hospital"><span>Hospital</span></a></li><li id="m_ambulancias" class=" "><a href="/ambulancias" title="Ambulancias"><span>Ambulancias</span></a></li><li id="m_donativos" class=" "><a href="/donativos" title="Donar"><span>Donar</span></a></li><li id="m_transparencia" class=" "><a href="/transparencia" title="Transparencia"><span>Transparencia</span></a></li><li id="m_contacto" class=" "><a href="/contacto" title="Contacto"><span>Contacto</span></a></li><li id="m_noticias" class="active"><a href="/blog" title="Noticias"><span>Noticias</span></a></li><li id="m_capacitacion" class=""><a href="/centro-capacitacion" title="Centro de capacitación"><span>Capacitación</span></a></li></ul> 
+				</div>
+			</div>
+			
+			
+				<div id="hidden_menu">
+					<div class="container">
+						<ul class="menu"><li id="m_inicio"><a href="/inicio" title="Inicio"><span>Inicio</span></a></li><li id="m_nosotros" class=" "><a href="/nosotros" title="Nosotros"><span>Nosotros</span></a></li><li id="m_hospital" class=" "><a href="/hospital" title="Hospital"><span>Hospital</span></a></li><li id="m_ambulancias" class=" "><a href="/ambulancias" title="Ambulancias"><span>Ambulancias</span></a></li><li id="m_donativos" class=" "><a href="/donativos" title="Donar"><span>Donar</span></a></li><li id="m_transparencia" class=" "><a href="/transparencia" title="Transparencia"><span>Transparencia</span></a></li><li id="m_contacto" class=" "><a href="/contacto" title="Contacto"><span>Contacto</span></a></li><li id="m_noticias" class="active"><a href="/blog" title="Noticias"><span>Noticias</span></a></li><li id="m_capacitacion" class="active"><a href="/centro-capacitacion" title="Centro de Capacitación"><span>Capacitación</span></a></li>
+						</ul><ul class="social">
+								<li class="facebook first"><a href="https://www.facebook.com/cruzrojamexicanadelegaciontijuana" title="Síguenos en Facebook" target="_blank"></a></li><li class="twitter"><a href="https://twitter.com/CruzRojaTijuana" title="Seguir a @CruzRojaTijuana" target="_blank"></a></li><li class="youtube"><a href="http://www.youtube.com/user/comunicacionCRT" title="Síguenos en Youtube" target="_blank"></a></li>
+							</ul>
+					</div>
+				</div>
+		</div>
+		<!-- !id=header -->
+		<div id="content">
+			<h1><span><a href="/blog" title="Ir a noticias">Noticias</a></span></h1>	
+			<!-- blog engine start -->
+			<div class="container">
+				<div class="blog_wrapp">
+					{% nevercache %}
+					{% for message in messages %}
+					<div class="alert alert-{{ message.tags }}" data-alert="alert">
+					    <a class="close" href="#" onclick="$(this).parent().fadeOut('fast'); return false;">×</a>{{ message }}
+					</div>
+					{% endfor %}
+					{% endnevercache %}
+				</div>
+
+				<div class="blog_wrapp">
+				  		<ul class="breadcrumb">
+						{% spaceless %}
+						{% block breadcrumb_menu %}{% page_menu "pages/menus/breadcrumb.html" %}{% endblock %}
+						{% endspaceless %}
+						</ul>
+				</div>
+			</div>
+
+			<div class="container blog_wrapp">
+			<!--	<div class="row"> -->
+				<div class="left_column">
+			<!--		<div class="span7 middle"> -->
+					    {% block main %}{% endblock %}
+				<!--	</div> -->
+				</div><div class="right_column">
+				<!--	<div class="span3 right"> -->
+					    {% nevercache %}
+					    {% include "includes/user_panel.html" %}
+					    {% endnevercache %}
+					    <div class="panel">
+					    {% block right_panel %}
+					    {% ifinstalled mezzanine.twitter %}
+					    {% include "twitter/tweets.html" %}
+					    {% endifinstalled %}
+					    {% endblock %}
+					    </div>
+			<!--		</div> -->
+				</div>
+				</div>
+			</div>
+
+			<!-- end blog engine -->
+
+		</div>		
+		<div id="footer" class="blog_news">
+			<div class="container">
+				<div id="sitemap"><ul class="menu"><li id="m_nosotros"><a href="/nosotros" title="Nosotros"><span>Nosotros</span></a> <ul class="child"><li><a href="/nosotros/mision" title="Misión"><span>Misión</span></a></li><li><a href="/nosotros/siete-principios-cruz-roja" title="Siete Principios de Cruz Roja"><span>Siete Principios de Cruz Roja</span></a></li><li><a href="/nosotros/institucionalidad-transparencia" title="Institucionalidad y Transparencia"><span>Institucionalidad y Transparencia</span></a></li><li><a href="/nosotros/equipo-trabajo" title="Equipo de trabajo"><span>Equipo de trabajo</span></a></li><li><a href="/nosotros/voluntariado" title="Voluntariado"><span>Voluntariado</span></a></li><li><a href="/nosotros/historia" title="Historia"><span>Historia</span></a></li></ul> </li><li id="m_hospital"><a href="/hospital" title="Hospital"><span>Hospital</span></a> <ul class="child"><li><a href="/hospital/servicios" title="Servicios"><span>Servicios</span></a></li><li><a href="/hospital/medicos-especialistas" title="Médicos especialistas"><span>Médicos especialistas</span></a></li><li><a href="/hospital/instalaciones" title="Instalaciones"><span>Instalaciones</span></a></li><li><a href="/hospital/banco-sangre" title="Banco de Sangre"><span>Banco de Sangre</span></a></li></ul> </li><li id="m_ambulancias"><a href="/ambulancias" title="Ambulancias"><span>Ambulancias</span></a> <ul class="child"><li><a href="/ambulancias/equipo" title="Equipo"><span>Equipo</span></a></li><li><a href="/ambulancias/bases-ambulancia" title="Bases de Ambulancia"><span>Bases de Ambulancia</span></a></li></ul> </li><li id="m_transparencia"><a href="/transparencia" title="Transparencia"><span>Transparencia</span></a> <ul class="child"><li><a href="/transparencia/servicios-comunidad" title="Servicios a la Comunidad"><span>Servicios a la Comunidad</span></a></li><li><a href="/transparencia/ingresos-egresos" title="Ingresos y Egresos"><span>Ingresos y Egresos</span></a></li><li><a href="/transparencia/donativos" title="Donativos"><span>Donativos</span></a></li><li><a href="/transparencia/recuperacion" title="Recuperación"><span>Recuperación</span></a></li><li><a href="/transparencia/proyectos" title="Proyectos"><span>Proyectos</span></a></li></ul> </li><li id="m_contacto"><a href="/contacto" title="Contacto"><span>Contacto</span></a> <ul class="child"><li><a href="/contacto/ubicacion" title="Ubicación"><span>Ubicación</span></a></li><li><a href="/contacto/forma-contacto" title="Forma de Contacto"><span>Forma de Contacto</span></a></li><li><a href="/contacto/directorio" title="Directorio"><span>Directorio</span></a></li></ul> </li></ul>
+						<hr />
+						<div id="other_links">
+							<ul class="first">
+								<li class="first">
+									<a href="/centro-capacitacion" title="Centro de Capacitación" class="red_next_button">Centro de Capacitación</a>
+								</li><li>
+									<a href="/preparate" title="Prepárate">Prepárate</a>
+								</li><li>
+									<a href="/blog" title="Noticias">Noticias</a>
+								</li><li>
+									<a href="/creditos" title="Créditos" class="fancybox">Créditos</a>
+								</li>
+							</ul>
+
+							<ul class="social">
+								<li class="facebook first"><a href="https://www.facebook.com/cruzrojamexicanadelegaciontijuana" title="Síguenos en Facebook" target="_blank"></a></li><li class="twitter"><a href="https://twitter.com/CruzRojaTijuana" title="Seguir a @CruzRojaTijuana" target="_blank"></a></li><li class="youtube"><a href="http://www.youtube.com/user/comunicacionCRT" title="Síguenos en Youtube" target="_blank"></a></li>
+							</ul>
+						</div>
+
+					</div><div id="footer_extras">
+						<a href="donativos" class="link_header">Donativos</a>
+						<p class="big_text">Con tu donativo haces la diferencia</p>
+						<div id="footer_donaciones"><a href="/donativos/especie" title="Donar en especie" class="column third first">Donar en especie</a><a href="/donativos/tiempo" title="Donar tu tiempo" class="column third ">Donar tu tiempo</a><a href="/donativos/dinero" title="Donar económicamente" class="column third ">Donar económicamente</a>
+							<span class="column two_third first">
+								<a href="/donativos" title="Quiero donar" class="plus_button">
+									Quiero donar
+								</a>
+							</span><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5NL5HVNJCGK24" title="Donar por medio de paypal" class="column third paypal_button" target="_blank">	Donar por medio de paypal
+							</a>
+						</div>
+						<hr />
+						<p>Todos los derechos reservados © Cruz Roja 2013</p>
+						<p id="powered">Powered by:  <a href="http://www.thinkcorporativo.com/" title="thinkcorporativo.com" target="_blank">THINK</a> / <a href="http://www.mintitmedia.com/" title="mintitmedia.com" target="_blank">Mint</a></p>
+					</div>
+			</div>	
+	</div>
+	<div id="creditos" class="invisible">
+		<div id="credit_content">
+			<h4>Creditos</h4>
+			<p>Créditos y agradecimiento por su apoyo en:
+			</p>
+			<ul class="square_list">
+				<li><em>Fotografía:</em><span> Christian Vargas<br> <a href="mailto:maki.thereflex@gmail.com" title="{{gral_info.credits.write_to_alt}} Christian Vargas">maki.thereflex@gmail.com</a></span></li>
+				<li><em>Traducción:</em><span>  Melissa Michel
+					<a href="mailto:melissa.michel.m@gmail.com" title="{{gral_info.credits.write_to_alt}} Melissa Michel">melissa.michel.m@gmail.com</a>
+					<br>
+					Priscila Talavera
+					<a href="mailto:ptalaveram@live.com" title="{{gral_info.credits.write_to_alt}} Priscila Talavera">ptalaveram@live.com</a></span></li>
+				<li><em>Recopilación fotografías históricas:</em><span> Veterano Ricardo Naranjo</span></li>
+			</ul>
+		</div>
+		<div id="cred_out"></div>
+			
+	</div>
+</body>
+</html>

@@ -1,0 +1,366 @@
+{% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="intro_preparate">
+	<div class="container">
+		<h1>{{section_data_db.82}}</h1>
+	</div>
+	<div id="preparate_intro_img"></div>
+</div>
+<div class="container">
+	<div class="side_column">
+		<div id="preparate_menu">
+			<ul>
+				{{section_data_db.0}}
+			</ul>
+		</div>
+		
+		<div id="descarga_manual">
+			{{section_data_db.1}}
+		</div>
+		
+	</div><div class="main_column"> 
+
+		<span id="incendios"></span>
+		<span id="inundaciones"></span>
+		<span id="terremoto"></span>
+		<span id="paro-respiratorio-adulto"></span>
+		<span id="paro-respiratorio-bebe"></span>
+		<span id="sangrado-hemorragia"></span>
+		<span id="envenenamiento"></span>
+		<span id="quemaduras"></span>
+		<span id="quemaduras-electricidad"></span>
+		<span id="fracturas"></span>
+		<span id="atragantamiento"></span>
+		<span id="ataque-corazon"></span>
+		<span id="agotamiento-por-calor-y-ataque-de-calor"></span>
+		<span id="exposicion-prolongada-frio"></span>
+		<span id="seguridad-vial"></span>
+
+		<span id="fires"></span>
+		<span id="floods"></span>
+		<span id="earthquakes"></span>
+		<span id="respiratory-arrest-adult"></span>
+		<span id="respiratory-arrest-baby"></span>
+		<span id="bleeding-hemorrage"></span>
+		<span id="poisoning"></span>
+		<span id="burns"></span>
+		<span id="burns-by-electricity"></span>
+		<span id="fractures"></span>
+		<span id="choking"></span>
+		<span id="heart-attack"></span>
+		<span id="exhaustion-by-heat"></span>
+		<span id="extended-exposure-to-cold"></span>
+		<span id="road-safety"></span>
+		
+
+
+		<h1 id="instructions_paragraph">{{section_data_db.2}}</h1>
+		<div id="panel_casos">
+
+		<div id="caso_incendios" class="{% if tag in 'incendios,fires' %} visible {% elif not tag %} visible {% else %} invisible {% endif %}">
+			<h2><span>{{section_data_db.3}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				{{section_data_db.4}}
+			</div>
+		</div><!-- #men_incendio_cont -->
+			
+			
+			
+		
+		
+		<div id="caso_inundaciones" class="{% if tag in 'inundaciones,floods' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.5}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				{{section_data_db.6}}
+			</div>
+		</div><!-- #men_inundaciones_cont -->
+		
+		
+		
+		<div id="caso_terremoto" class="{% if tag in 'terremoto,earthquakes' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.7}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				{{section_data_db.8}}
+			</div>
+			
+		</div><!-- #men_terremoto_cont -->
+		
+		
+		
+		<div id="caso_paro-adulto" class="{% if tag in 'paro-respiratorio-adulto,respiratory-arrest-adult' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.9}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<h3>{{section_data_db.10}}</h3>
+				<ul class="square_list">
+					{{section_data_db.11}}
+				</ul>
+				
+				<div id="paro_1" class="preparate_img"></div>
+				
+				<h3>{{section_data_db.12}}</h3>
+				<ul class="square_list">
+					{{section_data_db.13}}
+				</ul>
+
+				<div id="paro_2" class="preparate_img"></div>
+				
+				
+				<h3>{{section_data_db.14}}</h3>
+				<ul class="square_list">
+					{{section_data_db.15}}
+				</ul>
+
+
+				<h3>{{section_data_db.16}}</h3>
+				<ul class="square_list">
+					{{section_data_db.17}}
+				</ul>
+
+				<div id="paro_3" class="preparate_img"></div>
+
+
+				<h3>{{section_data_db.18}}</h3>
+				<ul class="square_list">
+					{{section_data_db.19}}
+				</ul>
+				<ul class="square_list">
+					{{section_data_db.20}}
+				</ul>
+				
+				<h3>{{section_data_db.21}}</h3>
+				<ul class="square_list">
+					{{section_data_db.22}}
+				</ul>
+				
+			</div>
+			
+		</div><!-- #men_paro-adulto_cont -->
+		
+		
+		<div id="caso_paro-bebe" class="{% if tag in 'paro-respiratorio-bebe,respiratory-arrest-baby' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.23}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				
+				<ul class="square_list">
+					{{section_data_db.24}}
+				</ul>
+				
+				<div id="paro_4" class="preparate_img"></div>
+				
+				<h3>{{section_data_db.25}}</h3>
+				<ul class="square_list">
+					{{section_data_db.26}}
+				</ul>
+				
+			</div>
+		</div><!-- #men_paro-bebe_cont -->
+		
+		<div id="caso_sangrado" class="{% if tag in 'sangrado-hemorragia,bleeding-hemorrage' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.27}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<p>{{section_data_db.28}}</p>
+				<ul class="square_list">
+					{{section_data_db.29}}
+				</ul>
+
+				<div id="sangrado_1" class="preparate_img"></div>
+			</div>
+		</div><!-- #men_sangrado_cont -->
+
+		<div id="caso_envenenamiento" class="{% if tag in 'envenenamiento,poisoning' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.30}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<p>{{section_data_db.31}}</p>
+				<ul class="square_list">
+					<li><span>{{section_data_db.32}}</span></li>
+				</ul>
+				<h3>{{section_data_db.33}}</h3>
+				<ul class="square_list">
+					{{section_data_db.34}}
+				</ul>
+			</div>
+		</div><!-- #men_envenenamiento_cont -->
+
+		<div id="caso_quemaduras" class="{% if tag in 'quemaduras,burns' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.35}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<p>{{section_data_db.36}}</p>
+				<table>
+					{{section_data_db.37}}
+				</table>
+			</div>
+		</div><!-- #men_quemaduras_cont -->
+	
+		
+		<div id="caso_quemaduras-elect" class="{% if tag in 'quemaduras-electricidad,burns-by-electricity' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.38}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				{{section_data_db.39}}
+				
+				<h3>{{section_data_db.40}}</h3>
+				<ul class="square_list">
+					{{section_data_db.41}}
+
+				</ul>
+				<div id="electricidad_1" class="preparate_img">
+					<p>{{section_data_db.42}}</p>
+				</div>
+				<ul class="square_list">
+					{{section_data_db.43}}
+				</ul>
+				<div id="electricidad_2" class="preparate_img">
+					<p>{{section_data_db.44}}</p>
+				</div>
+			</div>
+		</div><!-- #men_quemaduras-elect_cont -->
+		
+		
+		<div id="caso_fracturas" class="{% if tag in 'fracturas,fractures' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.45}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<p class="important big">{{section_data_db.46}}</p>
+				<ul class="square_list">
+					{{section_data_db.47}}
+				</ul>
+				<div id="fractura_1" class="preparate_img"></div>
+			</div>
+		</div><!-- #men_fracturas_cont -->
+		
+		
+		<div id="caso_atragantamiento" class="{% if tag in 'atragantamiento,choking' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.48}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<h3>{{section_data_db.49}}</h3>
+				{{section_data_db.50}}
+				
+				<div id="atragantamiento_1" class="preparate_img"></div>
+				
+				<h3>{{section_data_db.51}}</h3>
+				<ul class="square_list">
+					{{section_data_db.52}}
+				</ul>
+
+					<div id="atragantamiento_2" class="preparate_img"></div>
+
+			</div>
+		</div><!-- #men_atragantamiento_cont -->
+		
+		
+		<div id="caso_ataque" class="{% if tag in 'ataque-corazon,heart-attack' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.53}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<h3>{{section_data_db.54}}</h3>
+				
+				<ul class="square_list">
+					{{section_data_db.55}}
+				</ul>
+				
+				<h3>{{section_data_db.56}}</h3>
+				
+				<ul class="square_list">
+					{{section_data_db.57}}
+				</ul>
+				
+
+				<div id="corazon_1" class="preparate_img"></div>
+			</div>
+		</div><!-- #men_ataque_cont -->
+		
+
+		<div id="caso_calor" class="{% if tag in 'agotamiento-por-calor-y-ataque-de-calor,exhaustion-by-heat' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.58}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				{{section_data_db.59}}
+				
+				
+				
+				<h3>{{section_data_db.60}}</h3>
+				<ul class="square_list">
+					{{section_data_db.61}}
+				</ul>
+				
+				<h4>{{section_data_db.62}}</h4>
+				<ul class="square_list">
+					{{section_data_db.63}}
+				</ul>
+
+
+				<h3>{{section_data_db.64}}</h3>
+				<ul class="square_list">
+					{{section_data_db.65}}
+				</ul>
+
+				<h4>{{section_data_db.66}}</h4>
+				<ul class="square_list">
+					{{section_data_db.67}}
+				</ul>
+				
+			</div>
+		</div><!-- #men_calor_cont -->
+		
+		
+		
+		<div id="caso_frio" class="{% if tag in 'exposicion-prolongada-frio,extended-exposure-to-cold' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.68}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<h3 class="important">{{section_data_db.69}}</h3>
+				<ul class="square_list">
+					{{section_data_db.70}}
+				</ul>	
+				
+				<h3 class="important">{{section_data_db.71}}</h3>
+				<ul class="square_list">
+					{{section_data_db.72}}
+				</ul>
+
+
+				<h4>{{section_data_db.73}}</h4>
+				<ul class="square_list">
+					{{section_data_db.74}}
+				</ul>
+
+
+				<h3 class="important">{{section_data_db.75}}</h3>
+				<p>{{section_data_db.76}}</p>
+				
+				<h4>{{section_data_db.77}}</h4>
+				<ul class="square_list">
+					{{section_data_db.78}}
+				</ul>
+				
+			</div>
+		</div><!-- #men_frio -->
+		<div id="caso_seg-vial" class="{% if tag in 'seguridad-vial,road-safety' %}visible{% else %}invisible{% endif %}">
+			<h2><span>{{section_data_db.79}}</span></h2>
+			<hr>
+			<div class="wrapp">
+				<h3 class="important">{{section_data_db.80}}</h3>
+				<ul class="square_list">
+					{{section_data_db.81}}
+				</ul>
+			</div>
+		</div><!-- #seg_vial -->
+		
+		
+		</div>
+	<hr>		
+	</div>
+</div>
+{% endautoescape %}
+{% endblock %}

@@ -1,0 +1,844 @@
+/* ****************** INICIO ********************************* */
+.inicio #header
+	height: 153px
+	
+.inicio .white
+	background: #ffffff
+	min-width: 100%
+	position: relative
+	width: 100%
+	z-index: 5
+
+#wrapper.inicio
+	padding: 0
+	
+
+#index_news_slider	
+	background: transparent
+	
+	.slider_frame 
+		background: transparent
+		
+#twitter_panel, slideshow	
+	div
+		a
+#dark_intro_block
+	background: #cbd1d8
+	height: 375px
+	margin: 860px 0 0
+	position: relative
+	z-index: 5
+	
+	
+	ul
+		margin: 0
+	
+	a.plus_button
+		min-width: 110px
+		
+	.third
+		margin-bottom: 40px
+		margin-left: 2%
+		padding-bottom: 15px
+		padding-right: 0
+		width: 31.3%
+		
+	.third.collapse
+		margin-left: 2.5%
+	
+	.third.first
+		margin-left: 0
+		
+	.container
+		padding: 35px 0 17px
+		position: relative
+		z-index: 5
+		
+	li
+		background-size: cover
+		height: 375px
+		position: relative
+		
+	.background
+		background: url(#{$img_fe}slider_home/img_01.jpg) center top no-repeat
+		background-size: cover
+		left: 0
+		height: 375px
+		opacity: 1
+		position: absolute
+		top: 0
+		width: 100%
+		z-index: 2
+
+
+
+
+#intro_donar
+	background: url(#{$img_fe}slider_home/img_02.jpg) center top no-repeat
+
+#intro_sangre
+	background: url(#{$img_fe}slider_home/img_03.jpg) center top no-repeat
+	
+#intro_general
+	h2
+		color: #2b3e54
+		@extend %asap
+		font-size: 22px
+		letter-spacing: 0.05em
+		text-transform: uppercase
+		
+
+		
+#index_news
+	padding: 0 1% 50px 6%
+	position: relative
+	width: 58.6%
+	
+	h2
+		margin: 0 0 10px
+		
+	a.plus_link
+		color: #000000
+		font-size: 12px
+		margin: 17px 0 30px -56px
+		padding: 3px 0 0 58px
+
+	
+	.slider_nav
+		top: 37px
+		
+		a.next
+			top: 39px
+	
+	.slider_news
+		height: 66px
+		width: 492px
+		
+		h4.news_header
+			color: #333333
+			@extend %lato_light
+			font-size: 27px
+			margin-top: 0
+			padding-top: 0
+			
+			a
+				color: #333333
+	
+#index_news_slider
+	height: 70px
+	overflow: hidden
+	
+	.slider_frame
+		margin-bottom: 20px
+		min-height: 130px
+	
+	.slider_nav
+		top: 45px
+		
+	.news_header
+		color: #ededed
+		@extend %lato_light
+		font-size: 26px
+		letter-spacing: 0.05em
+		margin: 0 0 10px
+		
+		a
+			color: #ededed
+			
+			&:hover
+				color: lighten(#ededed, 10)
+		
+			
+			
+a.news_more
+	color: #e2e2e2
+	
+	&:hover
+		color: lighten(#e2e2e2, 10)
+
+#img_conocer, #img_donar
+	background: url(#{$img_fe}index_sprite.png) 0 0 no-repeat
+	height: 115px
+	
+#img_slideshow
+	background: url(#{$img_fe}index_sprite.png) 0 0 no-repeat
+
+#scroll_down
+	background: url(#{$img_fe}scroll_down_graph.png) center top no-repeat
+	cursor: default
+	display: block
+	@extend %lato_bold
+	font-size: 8px
+	height: 45px
+	left: 50%
+	line-height: 5000em
+	margin: 0 0 0 -80px
+	overflow: hidden
+	opacity: 1
+	padding: 0
+	position: absolute
+	top: 510px
+	@include transition(opacity 0.2s ease-in)
+	width: 45px
+	z-index: 2
+
+	&:hover
+		cursor: pointer
+		opacity: .6
+	
+#img_conocer
+	a.plus_button	
+		margin: 86px 0 0 23px
+
+#img_donar
+	background-position: -320px 0
+	
+	.third
+		background: transparent
+			
+		&:hover
+			background: rgba(255,255,255, .1)
+			
+	.third.first
+		width: 33%
+	
+	.third, .two_third
+		line-height: 5000em
+		margin: 0
+		height: 73px
+		overflow: hidden
+		padding: 0
+		width: 33.3%
+		
+	.two_third
+		height: 29px
+		line-height: 1em
+		padding: 13px 6%
+		width: 54.4%
+		
+	a.plus_button
+		line-height: 1em
+		
+	.paypal_button
+		height: 55px
+		width: 32.9%
+
+#img_donar.third	
+	width: 32.3%
+	
+	
+#img_slideshow	
+	background: url(../images/fe/slider_banner_dark_area.png) 0 0 no-repeat
+	margin: 0 0 0 -55px
+	opacity: 1
+	padding: 0 0 0 55px
+	@include transition(opacity 0.2s ease-in)
+	
+	&:hover
+		opacity: .8
+	
+	.hidden_button
+		display: block
+		height: 111%
+		line-height: 5000em
+		margin-left: -2%
+		overflow: hidden
+		width: 101%
+
+	.slideshow
+		height: 130px
+		margin: 0
+		width: 490px
+		
+		img
+			height: 100%
+			width: 100%
+		a
+			display: block
+			height: 130px
+			width: 490px
+			
+#first_p
+	@extend %asap
+	font-size: 17px
+	letter-spacing: 0.06em
+	margin: 0 0 15px
+
+
+
+	
+
+.paypal_button
+	display: inline-block
+	height: 55px
+	line-height: 5000em
+	margin: 73px 0 0 23px
+	overflow: hidden
+	vertical-align: top
+	width: 100px
+
+h4.twitter_header, h4.facebook_header, #twitter_follow_button
+	@extend %asap
+	color: #ffffff
+	
+	a
+		color: #ffffff
+
+#twitter_panel
+	height: 74px
+	margin: 30px auto 0
+	
+#index_about
+	background: url(#{$img_fe}index_about_background.jpg) center top no-repeat
+	background-size: cover
+	display: block
+	min-height: 790px
+	position: absolute
+	padding: 40px 0
+	top: 183px
+	min-width: 1100px
+	width: 100%
+	
+	p
+		color: #2b3e54
+		@extend %lato
+		font-size: 19px
+		letter-spacing: 0.01em
+		line-height: 1.2em
+		margin: 0 0 10px
+		text-align: justify
+		
+	
+	.container
+		position: relative
+		z-index: 4
+		
+	.column.half
+		padding-top: 20px
+		width: 45%
+	
+	.column.half.first
+		padding-top: 0
+		width: 53%
+		
+	a.plus_button
+		margin: 40px 0 0 187px
+		
+.eng
+	#index_about
+		a.plus_button
+			margin: 40px 0 0 165px
+
+#index_about.fixed
+	position: fixed
+	top: 0		
+	
+#index_about.hidden
+	display: none
+	
+
+@media screen and (min-width: 1800px)
+	#index_about
+		background-size: cover
+
+	
+.inicio
+	.blue_container
+		a.plus_button
+			&:hover
+				background-color: #d53230
+				border-color: #d53230
+				color: #ffffff
+
+	#ambulancia
+		font-size: 14px
+		letter-spacing: 0.04em
+		line-height: 1.4em
+		
+		.half.first
+			margin-right: 17%
+			width: 40%
+			
+		.half.collapse
+			width: 42%
+			
+		.half
+			padding: 0 0 100px
+		
+		h2
+			@extend %lato_light
+			font-size: 32px
+			letter-spacing: 0.03em
+			line-height: 1.2em
+			margin: 0 0 80px
+			text-align: center
+			text-transform: uppercase
+			
+		em
+			@extend %lato_bold
+			font-style: normal
+			
+		p
+			text-align: justify
+			
+		.column
+			position: relative
+			
+		h3
+			@extend %asap_bold
+			color: #bce2e9
+			font-size: 32px
+			letter-spacing: 0.04em
+			line-height: 1.15em
+			
+			a
+				color: #bce2e9
+				
+				&:hover
+					color: lighten(#bce2e9, 10)
+					
+		.third.collapse
+			padding: 0 0 50px 3%
+			width: 29.3%
+			
+		a.plus_button, a.red_plus_button
+			margin-top: 40px
+			
+	#donativos
+		overflow: hidden
+		padding-bottom: 0
+		min-width: 100%
+		width: 100%
+		
+		p
+			color: #333333
+			font-size: 24px
+			letter-spacing: 0.04em
+			line-height: 1.4em
+			text-align: justify
+			
+		h2
+			color: #2b3e54
+			@extend %asap_bold
+			font-size: 44px
+			letter-spacing: 0.03em
+			line-height: 1em
+			
+			em
+				display: block
+				@extend %asap_italic
+				font-size: 32px
+				font-style: normal
+	
+	#index_hospital
+		width: 123%
+		
+		h3
+			color: #2b3e54
+			font-size: 26px
+			letter-spacing: 0.03em
+			margin: 10px 0 17px
+			max-width: 325px
+			
+		.slider_screen
+			height: 520px
+			left: 60px
+			margin: 0
+			top: -30px
+			width: 100%
+			
+		.slider_frame
+			height: 100%
+			left: 40px
+			position: relative	
+			width: 100%
+			
+			div
+				width: 520px !important
+		
+	#como-donar
+		h2, h3
+			color: #ffffff
+			letter-spacing: 0.04em
+			
+			a
+				color: #ffffff
+				
+				&:hover
+					color: darken(#ffffff, 10)
+					
+		h2
+			@extend %asap_bold
+			font-size: 44px
+			letter-spacing: 0.05em
+			
+		h3
+			font-size: 40px
+			margin-bottom: 0
+			
+			a
+				background: url(#{$img_fe}como_donar_graphic.png) left top no-repeat
+				display: block
+				padding-top: 65px
+				
+		#c_d_tiempo
+			a
+				background-position: -495px top
+			
+		#c_d_dinero
+			a
+				background-position: -998px top
+			
+		.plus_button
+			margin-top: 20px
+
+#capacitacion_img
+	background: url(#{$img_fe}index_sprite.png) 0 -226px no-repeat
+	display: block
+	height: 325px
+	margin: 0
+	width: 400px
+			
+#hospital_slider
+	color: #2b3e54
+	@extend %asap
+	font-size: 47px
+	//height: 290px
+	line-height: 1.3em
+	overflow: hidden
+	padding: 0
+	position: relative
+	width: 100%
+	
+	em
+		color: #4c4c4c
+		display: block
+		@extend %lato_light
+		font-size: 170%
+		font-style: normal
+		
+	a
+		color: #2b3e54
+		
+		&:hover
+			color: lighten(#2b3e54, 10)
+			
+			em
+				color: lighten(#4c4c4c, 10)
+		
+		em
+			color: #4c4c4c
+		
+	em.inline_number, .inline_text
+		display: inline-block
+		vertical-align: top
+
+	em.inline_number
+		height: 120px
+		max-width: 22%
+		padding: 10px 20px 0 0
+		
+	.inline_text	
+		line-height: 1.2em
+		width: 78%
+			
+	.slider_nav
+		top: 74px
+		
+	.slider_frame	
+		background: url(#{$img_fe}doctor_patient.jpg) bottom right no-repeat
+		margin-bottom: 45px
+		
+	.slider_frame.ambulancia
+		background-image: url(#{$img_fe}logro_ambulancia.jpg)
+		
+	.slider_frame.centro_de_capacitacion
+		background-image: url(#{$img_fe}logro_centro.jpg)
+		
+	.slider_frame.hospital
+		background-image: url(#{$img_fe}doctor_patient.jpg)
+
+#logros_nav
+	margin: -130px 0 0
+	padding: 0 0 80px 60px
+	
+#ind_phone
+	margin: 45px 0 0
+
+#ind_ambulance
+	margin: 90px 0 0 -30px
+			
+#ind_hospital
+	margin: 15px -100px 0
+
+#social_block.third	
+	padding-bottom: 0
+	width: 31.3%
+				
+#social_block
+	@extend %lato 
+	color: #333333
+	font-size: 13px
+	
+	h4
+		background: url(#{$img_fe}index_social_header.png) left 0 no-repeat
+		font-size: 14px
+		
+		a
+			padding: 3px 0 3px 40px
+			display: block
+		
+	h4.facebook_header
+		background-position: left -165px
+
+
+	a
+		color: #333333
+		letter-spacing: 0.03em
+		line-height: 1.4em
+	
+		&:hover
+			color: lighten(#333333, 8)
+			
+h4.twitter_header
+	display: inline-block
+	margin: 0
+	vertical-align: top
+	width: 38.3%
+
+a#twitter_follow_button
+	background: #f7f7f7 url(#{$img_fe}index_social_header.png)  left -381px no-repeat
+	border: #d3d3d3 1px solid
+	color: #4c4c4c
+	display: inline-block
+	font-size: 11px
+	line-height: 1em
+	margin: 20px 0 0
+	padding: 4px 9px 6px 30px
+	vertical-align: top
+	width: 50%
+	
+	&:hover
+		background-color: darken(#f7f7f7, 6)
+		color: #4c4c4c
+
+h4.facebook_header
+	display: block
+	margin: 50px 0 35px
+
+.blue_container
+	ul.square_list
+		span
+			color: #ffffff
+			display: block
+			padding: 0 0 0 30px
+
+#preparate_videos
+	font-size: 14px
+	margin: 40px 0 0
+	
+	.column.first
+		h2
+			a
+				background: #fded1b url(#{$img_fe}preparate_plus_icon.png) right 7px no-repeat
+				border: 1px solid #f2cc11
+				border-width: 1px 1px 3px
+				display: block
+				@extend %lato_bold
+				font-size: 16px
+				padding: 13px 15px
+				text-transform: uppercase
+				
+				&:hover
+					background-color: lighten(#fded1b, 10)
+					
+		a.plus_button
+			background: url(#{$img_fe}preparate_next.png) 10px 5px no-repeat
+			border: none
+			color: #4c4c4c
+			@extend %lato_bold
+			margin: 0
+			padding: 10px 0 10px 40px
+			
+			&:hover
+				background-position: 10px -152px
+	
+	h2
+		@extend %asap
+		a
+			color: #2B3E54
+			@extend %asap
+			
+			&:hover
+				color: lighten(#2B3E54, 10)
+	
+	p
+		font-size: 14px
+		line-height: 1.4em
+	
+	a.plus_button
+		display: block
+		margin: 0 0 0 auto
+		width: 210px
+	
+	a.youtube_icon
+		background-image: url(#{$img_fe}youtube_symbol.png)
+	
+	.prepare_emergency
+		background: url(#{$img_fe}sprite_prepare_emergency.png) 0 0 no-repeat
+		border-bottom: 1px solid #c4c4c4
+		margin: 50px 0 30px
+		min-height: 140px
+		padding: 0 0 20px 100px
+		
+		h3
+			color: #d53230
+			@extend %lato_bold
+			text-transform: uppercase
+			
+			a
+				color: #d53230
+				
+				&:hover
+					color: lighten(#d53230, 10)
+	
+		
+	#emerg_incendio
+		background-position: 0 0
+	
+	#emerg_inundacion
+		background-position: 0 -340px
+		
+	#emerg_terremoto
+		background-position: 0 -680px
+		
+	#emerg_quemaduras
+		background-position: 0 -1170px
+		
+	#emerg_fracturas
+		background-position: 0 -1705px
+		
+	#emerg_envenenamiento
+		background-position: 0 -2181px
+	
+	#emerg_ataque-corazon
+		background-position: 0 -2693px
+		
+		
+#video_wrapp
+	border: 1px solid #c4c4c4
+	margin: 36px 0 45px
+	padding: 6px
+	
+	
+#trauma_slider
+	.slider_vert
+		.slider_frame
+			min-width: 417px
+	
+.bullet_slider
+	position: relative
+	z-index: 9
+
+
+/* **************** ANIMACION **************** */	
+
+.animated
+	opacity: 0
+
+.animated.fadeInUpBig, .animated.fadeInDown, .animated.fadeInLeft
+	opacity: 1
+	@include transition(opacity 0.5s ease-in)
+	
+
+#img_conocer
+	animation-delay: 2s
+	
+#img_donar
+	animation-delay: 3s
+
+#img_slideshow
+	animation-delay: 4s
+
+#boton_hospital
+	animation-delay: 1s
+
+#bloque_hospital, #capacitacion_img
+	animation-delay: .5s
+	
+
+.inicio
+	.blue_container, .red_container, .red_container .dark_container
+		background-color: transparent
+		@include transition(background-color 0.5s ease-in)
+		
+	.blue_container.inview
+		background-color: #2B3E54
+
+	.red_container
+		.dark_container
+			min-height: 400px
+
+	.red_container.inview
+		background-color: #D53230
+		min-height: 585px
+		
+		.dark_container
+			background-color: #B73230
+		
+	
+.animated_column_image
+	min-height: 210px
+	
+#img_donativos_cuotas
+	animation-delay: 1s
+
+#bloque_logros_index
+	animation-delay: 1s
+	
+.inicio #preparate_videos, #footer.inicio
+	animation-delay: 1s
+	
+	
+#dark_intro_block, #donativos, .inicio .blue_container, #como-donar, #preparate_videos, .inicio #footer
+	position: relative
+	z-index: 5
+	
+	
+#inicio_intro_slider	
+	left: -50px
+	position: relative
+	width: 460px
+
+	.slider_nav
+		top: 18px
+		z-index: 3
+		
+	.slider_vert
+		height: 150px
+	
+	.slider_frame
+		color: #333333
+		@extend %asap
+		font-size: 39px
+		height: 150px
+		margin-left: 50px
+		padding: 10px 0 0 0
+		text-transform: uppercase
+		width: 100%
+		
+		
+		p
+			font-size: 39px
+			margin: 0
+			
+	.slider_frame.small
+		p
+			text-align: left
+			font-size: 30px
+	
+/* ******************* TEMPORAL ************ */
+#intro_donar, #intro_sangre
+	display: none
+	
+	

@@ -1,0 +1,251 @@
+ {% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="index_about">
+	<span id="scroll_down">{{section_data.header.scroll_down}}</span>
+	<div class="container">
+		<div class="column half first collapse">
+		
+		</div><div class="column half">
+			<p>{{section_data.our_mission.title}}</p>
+			<div id="inicio_intro_slider">
+				<div class="slider_nav">
+					<a href="prev" title="prev" class="" id="news_prev"></a>
+					<a href="next" title="next" class="next" id="news_next"></a>
+				</div>						
+				<div class="slider_vert">
+					{{section_data.our_mission.slider}}
+				</div>
+			</div>
+			
+			
+		<!--	<p>{{section_data.hospital.description}}</p> -->
+			<a href="/{{section_data.hospital.link_href}}" title="{{section_data.hospital.link_title}}" class="plus_button">{{section_data.hospital.link_title}}</a>
+		</div>
+	</div>
+	<div id="img_arbusto"></div>
+	<div id="img_nubes"></div>
+	<div id="img_edificio"></div>
+	<div id="img_paramedico"></div>
+</div>
+<div id="dark_intro_block" class="cbp-fwslider">
+	<ul>
+		<li id="intro_general">
+			<div class="container">
+				<div id="index_news" class="column two_third first">
+					
+					
+					
+					<!-- SLIDER -->
+					<h2>{{section_data.header.news_title}}</h2>	
+				
+					<div id="index_news_slider">
+						{% if posts|length > 1%}
+						<div class="slider_nav">
+							<a href="prev" title="prev" class="" id="news_prev_2"></a>
+							<a href="next" title="next" class="next" id="news_next_2"></a>
+						</div>			
+						{% endif %}			
+						<div class="slider_news">
+							{% for row in posts %}
+							<div class="slider_frame {% if posts|length == 1 %}visible {% endif %}">
+								<h4 class="news_header">
+									<a href="{{row.get_absolute_url}}" title="Leer noticia" class="news_more">{{row}}</a>
+								</h4>
+							</div>
+							{% endfor %}
+						</div>						
+					</div>			
+					<!-- !SLIDER -->
+					<a href="/{{section_data.header.news_href}}" class="plus_link">{{section_data.header.news_read_more}}</a>
+					
+					
+					
+					<div id="img_slideshow" class="">
+						<div class="slideshow">
+							{% if campanas %}
+							{% for row in campanas %}
+							<a href="/static/media/{{row.big_image}}" title="{{row.alt}}" class="fancybox {% if not forloop.first %}hide {% endif %}" rel="fancybox_campanas"><img src="/static/media/{{row.thumbnail}}" alt="{{row.alt}}"/> </a>
+							{% endfor %}
+							{% endif %}
+						</div> 
+					</div>
+					
+				</div><div id="social_block" class="column third">	
+					<h4 class="facebook_header"><a href="{{gral_info.facebook_href}}" title="{{gral_info.facebook_title}}" target="_blank">{{gral_info.facebook_title}}</a></h4>		
+					<h4 class="twitter_header"><a href="{{gral_info.twitter_href}}" title="{{gral_info.twitter_title}}"  target="_blank">Tweets</a></h4>
+					<div id="twitter_panel" class="slideshow">					
+					</div>
+					<a href="{{gral_info.twitter_href}}" title="{{gral_info.twitter_title}}" id="twitter_follow_button" target="_blank">{{gral_info.twitter_title}}</a>
+					
+				</div>	
+			</div>		
+			<div class="background"></div>			
+		</li>
+		<li id="intro_donar">
+			<div class="container">				
+			</div>
+		</li>
+		<li id="intro_sangre">
+			<div class="container">
+				
+			</div>
+		</li>
+	</ul>
+	</div>
+</div>
+<div class="white">
+	<div class="blue_container">
+		<div id="ambulancia" class="container">
+			<h2>{{section_data.ambulancia.titles}}</h2>
+			<hr />
+			<div class="column third first animated_column_image">
+				<img id="ind_phone" src="/static/images/fe/index_phone.png" alt="{{section_data.ambulancia.tel}}">
+			</div><div class="column third animated_column_image">
+				<img id="ind_ambulance" src="/static/images/fe/index_ambulance.png"  alt="{{section_data.ambulancia.tel}}" >
+			</div><div class="column third animated_column_image">
+				<img id="ind_hospital" src="/static/images/fe/index_hospital.png"  alt="{{section_data.ambulancia.tel}}">
+			</div>
+			<hr />
+
+			<div class="column half first">
+				<div id="bloque_socorrismo" class="animated">
+					<h3><a href="{{section_data.ambulancia.socorro_href}}" title="Socorrismo y ambulancias">{{section_data.ambulancia.socorro_title}}</a></h3>
+					{{section_data.ambulancia.socorro_desc}}
+					<a href="/{{section_data.ambulancia.socorro_link_href}}" title="{{section_data.ambulancia.socorro_link_title}}" class="plus_button">
+						{{section_data.ambulancia.socorro_link_aux}}
+					</a>
+				</div>
+			</div><div class="column half collapse">
+				<div id="bloque_hospital" class="animated">
+					<h3><a href="{{section_data.ambulancia.hospital_href}}" title="{{section_data.ambulancia.hospital_title}}">{{section_data.ambulancia.hospital_title}}</a></h3>
+					{{section_data.ambulancia.hospital_desc}}
+				</div>
+					<a href="{{section_data.ambulancia.hospital_link_href}}" title="{{section_data.ambulancia.hospital_link_title}}" class="animated plus_button" id="boton_hospital">
+						{{section_data.ambulancia.hospital_link_aux}}
+					</a>
+			</div>
+			<div class="column half first">
+				<div id="bloque_cap" class="animated">
+					<h3><a href="{{section_data.ambulancia.capacitacion_href}}" title="{{section_data.ambulancia.capacitacion_title}}">{{section_data.ambulancia.capacitacion_title}}</a></h3>
+					<p>{{section_data.ambulancia.capacitacion_desc}}</p>
+					<ul class="square_list">
+						{{section_data.ambulancia.capacitacion_list}}
+					</ul>
+					<a href="{{section_data.ambulancia.capacitacion_mas_href}}" title="{{section_data.ambulancia.capacitacion_mas_title}}" class="plus_button">
+						{{section_data.ambulancia.capacitacion_mas_title}}
+					</a>
+				</div>
+			</div><div class="column half collapse">
+				<span id="capacitacion_img" class="animated"></span>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
+<div id="donativos" class="square_gradient">
+	<div class="container">
+		<div class="column half first">
+			<img src="/static/images/fe/{{section_data.logros.img_datos}}" alt="{{section_data.logros.img_alt}}" id="img_donativos_cuotas" class="animated" >
+		</div><div class="column half">
+			<div id="acceso_transparencia_wrapp">
+				<p>{{section_data.logros.desc}}</p>
+			
+				<a href="/{{section_data.logros.transparencia_href}}" title="{{section_data.logros.transparencia_title}}" class="plus_button">
+			 		{{section_data.logros.transparencia_title}}
+				</a>
+			</div>
+		</div>
+		<div id="bloque_logros_index" class="animated">
+			<hr>
+			<h2>{{section_data.logros.logros_title}}</h2>
+			<div id="index_hospital">
+				<div id="hospital_slider">
+					<div class="slider_nav">
+						<a href="prev" title="prev" class="" id="logros_prev"></a>
+						<a href="next" title="next" class="next" id="logros_next"></a>
+					</div><!-- .slider_nav -->
+			
+					<div class="slider_logros slider_screen" data-height="520" data-position="vertical">
+						{% if logros %}
+						{% for row in logros %}
+						<div class="slider_frame {% if row.category.id == 1 %}ambulancia{% elif row.category.id == 3 %}centro_de_capacitacion{% endif %}">
+							<div>	
+								<h3 class="gray_line_bottom" id="logros_categoria">{{row.category.title}}</h3>
+								{% if row.link|length %}
+								<a href="{{row.link}}" alt="{{row.category}}">{{row.text}}</a>
+								{% else %}
+								{{row.text}}
+								{% endif %}
+							</div>
+						</div><!-- .slider_ frame-->
+						{% endfor %}
+						{% endif %}
+					</div><!-- .slider_screen -->
+				
+				</div><!-- #hospital_slider -->
+				<div class="bullet_slider">
+					<div class="bullet_nav" id="logros_nav"></div>
+				</div><!-- .bullet_slider -->
+			</div><!-- #index_hospital -->	
+		</div>	
+	</div><!-- .container -->
+</div><!-- #donativos -->
+<div id="como-donar" class="red_container">
+	<div class="container">
+		<h2><a href="{{section_data.donar.href}}" title="{{section_data.donar.title}}">{{section_data.donar.title}}</a></h2>
+	</div>
+	<div class="dark_container">
+		<div class="container">
+			<div class="column third first">
+				<div id="col_animada_especie">
+					<h3><a href="{{section_data.donar.especie.href}}" title="{{section_data.donar.especie.title}}">{{section_data.donar.especie.title}}</a></h3>
+					<hr class="double_line">
+					<ul class="square_list">
+						{% for row in section_data.donar.especie.items %}
+						<li>{{row.title}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div><div class="column third">
+				<div id="col_animada_tiempo">
+					<h3 id="c_d_tiempo"><a href="{{section_data.donar.tiempo.href}}" title="{{section_data.donar.tiempo.title}}">{{section_data.donar.tiempo.title}}</a></h3>
+					<hr class="double_line">
+					<ul class="square_list">
+						{% for row in section_data.donar.tiempo.items %}
+						<li>{{row.title}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div><div class="column third">
+				<div id="col_animada_dinero">
+					<h3 id="c_d_dinero"><a href="{{section_data.donar.dinero.href}}" title="{{section_data.donar.dinero.title}}">{{section_data.donar.dinero.title}}</a></h3>
+					<hr class="double_line">
+					<p>{{section_data.donar.dinero.desc}}
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="column third first no_bottom_padding">
+			<div id="mini_col_animada_especie">
+				<a href="{{section_data.donar.link_donativos_href}}" title="{{section_data.donar.link_donativos_title}}" class="plus_button">{{section_data.donar.link_donativos_title}}</a>
+			</div>
+		</div><div class="column third no_bottom_padding">
+			<div id="mini_col_animada_tiempo">
+				<a href="{{section_data.donar.link_contactanos_href}}" title="{{section_data.donar.link_contactanos_title}}" class="plus_button">{{section_data.donar.link_contactanos_title}}</a>
+			</div>
+		</div><div class="column third no_bottom_padding">
+			<div id="mini_col_animada_dinero">
+				<a href="{{section_data.donar.link_conocenos_href}}" title="{{section_data.donar.link_conocenos_title}}" class="plus_button">{{section_data.donar.link_conocenos_title}}</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% include 'block/preparate.html' %}
+{% endautoescape %}
+{% endblock %}

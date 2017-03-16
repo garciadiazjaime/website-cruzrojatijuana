@@ -1,0 +1,346 @@
+/* ****************** FONTFACE ************** */
+
+@font-face
+	font-family: 'Asap_Regular'
+	src: url('../fonts/asap.eot')
+	src: url('../fonts/asap.eot?#iefix') format('embedded-opentype'), url('../fonts/asap.woff') format('woff'), url('../fonts/asap.ttf') format('truetype'), url('../fonts/asap.svg#Asap_Regular') format('svg')
+	font-weight: normal
+	font-style: normal
+        
+        
+
+%asap
+	font-family: 'Asap_Regular', Verdana, sans-serif
+	font-weight: normal     
+        
+/* Timeline */
+
+
+#timeline
+	background: none
+
+	div.navigation
+		background: url('/static/images/timeline/timeline_bg.jpg') repeat
+		border-top: none
+
+                
+.slider
+	.slider-container-mask
+		.slider-container
+			background: none
+
+
+/* Creating the 3D effect for the timeline navigation */
+
+
+#timeline
+
+	div.navigation:before
+		position: absolute
+		content: ''
+		height: 0
+		width: 100%
+		left: 0
+		top: -40px
+		background: url('/static/images/timeline/timeline_bg.jpg') repeat
+
+
+	div.navigation:after
+		position: absolute
+		content: ''
+		height: 10px
+		width: 100%
+		left: 0
+		top: -40px
+		background: repeat-x
+
+
+		background-image: linear-gradient(bottom, #434446 0%, #363839 100%)
+		background-image: -o-linear-gradient(bottom, #434446 0%, #363839 100%)
+		background-image: -moz-linear-gradient(bottom, #434446 0%, #363839 100%)
+		background-image: -webkit-linear-gradient(bottom, #434446 0%, #363839 100%)
+		background-image: -ms-linear-gradient(bottom, #434446 0%, #363839 100%)
+
+
+
+
+/* Adding a darker background to the timeline navigation */
+
+#timeline 
+	div.timenav-background
+		background-color: #222
+		background-color: rgba(0,0,0,0.4) 
+
+
+	.navigation 
+		.timenav-background
+			.timenav-interval-background
+				background: none
+
+	.top-highlight
+		background-color: transparent !important
+
+/* The zoom-in - zoom-out toolbar */
+
+#timeline 
+	.toolbar
+		border: none !important
+		background-color: #202222 !important    
+
+	div
+		border: none !important
+
+
+/* Styling the timeline numbers on the bottom */
+
+#timeline 
+	.navigation 
+		.timenav 
+			.time 
+				.time-interval-minor 
+					.minor
+						margin-left: -1px
+
+				.time-interval 
+					div
+						color: #CCCCCC
+
+
+/* The vertical lines */
+
+#timeline 
+	.navigation 
+		.timenav
+			.content 
+				.marker 
+					.line
+						background: #242828
+						box-shadow: 1px 0 0 rgba(255, 255, 255, 0.05)
+
+
+					.dot
+						background: none repeat scroll 0 0 #FFFFFF
+						border-radius: 3px 3px 3px 3px
+
+/* The previous - next arrows & labels */
+
+.slider 
+	.nav-previous 
+	
+		.icon
+			background: url("/static/images/timeline/timeline.png") no-repeat scroll 0 -293px transparent
+
+
+.slider .nav-previous,.slider .nav-next
+	font-family: 'Segoe UI',sans-serif
+	margin-top: -80px
+
+
+.slider
+	.nav-next
+		.icon
+			background: url("/static/images/timeline/timeline.png") no-repeat scroll 72px -221px transparent
+			width: 70px !important
+
+	.nav-next:hover
+		.icon
+			position: relative
+			right: -5px
+
+		.nav-previous:hover, .nav-next:hover
+			color: #666
+			cursor: pointer
+
+
+#timeline 
+	.thumbnail
+		border: medium none
+
+/* Color of the headings */
+
+#timeline h1, #timeline h2, #timeline h3, #timeline h4, #timeline h5, #timeline h6
+	color: #ddd
+
+/* The loading screen */
+
+#timeline 
+	@extend %asap
+
+	.feedback 
+		background-color: #222222
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.2) inset
+		border: none
+
+		div
+			color: #AAAAAA
+			font-size: 14px !important
+			font-weight: normal
+
+
+/* ---------------------------- The Slides ----------------------------- */
+
+
+#timeline .slider-item h2, #timeline .slider-item h3
+	font-family: 'Antic Slab','Segoe UI',sans-serif
+
+
+#timeline .slider-item h2
+	color: #fff
+
+
+#timeline .slider-item p
+	font-family: 'Segoe UI',sans-serif
+
+
+#timeline .slider-item img, #timeline .slider-item iframe
+	border: none
+
+
+/* Customizing the first slide - the cover */
+
+#timeline .slider-item:nth-child(1) h2
+	background: rgba(0,0,0,0.3)
+	white-space: nowrap
+	padding: 10px 5px 5px 20px
+	position: relative
+	right: -60px
+	z-index: 10
+
+#timeline .slider-item:nth-child(1) p i
+	font: normal normal 40px 'Dancing Script','Segoe UI',sans-serif
+	background: rgba(0,0,0,0.3)
+	white-space: nowrap
+	padding: 5px 20px
+	position: relative
+	right: -60px
+	z-index: 10
+
+#timeline .slider-item:nth-child(1) p .c1
+	color: #1bdff0
+
+
+#timeline .slider-item:nth-child(1) p .c2
+	color: #c92fe6
+
+
+#timeline .slider-item:nth-child(1) .media-container
+	left: -30px
+	position: relative
+	z-index: 1
+
+
+#timeline .slider-item:nth-child(1) .credit
+	text-align: center
+
+
+
+/* CUSTOM TIMELINE */
+#timeline_wrapp
+	background: #27394e
+	overflow: hidden
+	position: relative
+	width: 100%
+	z-index: 1
+        
+#timeline 
+	margin-bottom: -18px
+
+	.container.main
+		overflow: hidden
+		width: 100%
+        
+	.feature
+		height: 338px
+		
+		.slider
+			overflow-y: hidden !important
+			top: 0
+			padding-top: 0
+
+	.slider-item 
+		p
+			color: #fcfcfc
+			@extend %asap
+			max-height: 205px
+			overflow-y: auto
+
+		h2.date
+			@extend %asap
+			line-height: 1em
+
+		h3
+			@extend %asap
+			font-size: 16px
+			line-height: 1.2em
+			letter-spacing: 0.06em
+			text-transform: uppercase
+
+	.slider-item:nth-child(1) h2
+		background: transparent
+		@extend %asap
+		padding: 0
+		right: 0
+
+	div.navigation
+		background: #eaeaea
+
+		div.timenav-background
+			background: transparent
+       
+		.timenav-background
+			.timenav-line
+				background: #b73230
+				height: 139px
+          
+		.timenav
+			.content 
+				.marker:hover 
+					.line
+						background: transparent
+						border-left: 1px dashed #848484
+     
+
+				.marker
+					.line
+						background: transparent
+						border-left: 1px dashed #848484
+						height: 136px
+
+				.dot
+					top: 138px
+
+			.time
+				top: 141px
+
+	div.timenav-background
+		background: transparent
+        
+	.slider-item:nth-child(1) .credit
+		display: none
+
+	.slider
+		.slider-container-mask
+			background: #2b3e54
+			color: #fcfcfc
+			height: 335px !important
+
+			.slider-container
+				padding: 0
+                
+	.nav-previous:hover, .nav-next:hover
+		color: #ffffff
+        
+	.slider-item
+		padding: 0 30px
+		width: 965px
+        
+		.content 
+			padding: 20px 0 0
+			vertical-align: top
+		
+			.content-container
+				.media
+					.media-wrapper
+						.media-container
+							border: 1px solid #1C2D40
+							padding: 2px

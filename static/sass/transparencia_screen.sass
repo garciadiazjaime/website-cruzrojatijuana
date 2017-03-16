@@ -1,0 +1,286 @@
+#transparencia_intro
+	background: #2b3e54
+	color: #b5b5b5
+	padding: 60px 0 0
+	
+	h1
+		color: #b5b5b5
+		@extend %asap_bold
+		font-size: 31px
+		letter-spacing: 0.05em
+		margin: 0
+	
+	a
+		color: #ffffff
+		
+		&:hover
+			color: darken(#ffffff, 15)
+			
+	em
+		color: #ffffff
+		display: block
+		@extend %asap
+		font-size: 44px
+		font-style: normal
+		letter-spacing: 0.03em
+		margin: 20px 0 0
+		min-height: 35px
+		text-transform: uppercase
+		
+		span
+			background: url(#{$img_fe}red_cros_icon.png) left center no-repeat
+			display: inline-block
+			@extend %asap_bold
+			margin: 0 0 0 20px
+			padding: 4px 0 3px 50px
+			
+#transparencia_menu
+	background: #213245
+	font-size: 11px
+	margin: 40px 0 0
+	padding: 30px 0 0
+	text-transform: uppercase
+
+	ul
+		margin: 0
+		padding: 0
+		width: 100%
+		
+	li
+		display: inline-block
+		vertical-align: top
+		margin-left: 5%
+		max-width: 14.66%
+	
+	li.first
+		margin-left: 0
+		
+	a
+		display: block
+		height: 35px
+		padding: 0 0 20px
+	
+	li.current
+		a
+			background: url(#{$img_fe}transparencia_curren_symbol.png) center bottom no-repeat
+			
+.trans_graph
+	background: url(#{$img_fe}transparencia_sprite_2014.jpg) -137px -172px no-repeat
+	display: block
+	margin: 0 0 60px
+	width: 100%
+	
+#graph_socorrismo
+	height: 100px
+	margin: 0 0 30px
+	
+#graph_medico
+	background-position: -137px -275px
+	height: 715px
+
+#graph_capacitacion
+	background-position: -137px -1095px
+	height: 125px
+	
+#graph_destinos
+	background-position: -230px -1340px
+	height: 450px
+	margin: 0 auto
+	width: 600px
+	
+#graph_traslados
+	background-position: -487px -1550px
+	height: 325px
+	margin: 0 -55px 0 0
+	width: 430px
+	
+#graph_seguro
+	background-position: -52px -1840px
+	height: 270px
+	margin: 0 0 100px
+	
+
+
+table
+	background: #f7f7f7
+	border: 1px solid #d3d3d3
+	border-collapse: collapse
+	@extend %lato_bold
+	font-size: 13px
+	letter-spacing: 0.04em
+	margin: 20px 0 100px
+	text-align: left
+
+th, td span
+	padding: 13px 20px
+
+
+
+td
+	span
+		display: block
+		border-bottom: 1px solid #bdc1c5
+		margin: 0 -2px
+		min-height: 18px
+		
+	.first_space
+		border: none
+		margin-left: 10px
+		padding-left: 90px
+		
+	.first_space.border	
+		border-bottom: 1px solid #bdc1c5
+		
+	.negative_number
+		color: #b23230
+	
+#resultados_generales, #resultados_recuperacion
+	span
+		border-bottom-width: 2px
+		
+	.table_results
+		span.first
+			padding-left: 20px
+			
+	.table_title
+		@extend %lato
+
+#resultados_recuperacion
+	span
+		padding: 13px 30px
+		min-width: 60px
+
+#resultados_donaciones
+	margin-bottom: 0
+	
+.strong_text
+	@extend %lato_bold
+			
+span.first
+	margin-left: 10px
+
+	
+.table_results
+	span.first
+		padding-left: 90px
+		
+	
+span.last
+	margin-right: 10px
+
+.table_headers
+	th, td
+		background: #e8e8e8
+
+.table_results
+	td
+		background: #d53230
+		color: #fff
+
+.table_title, .table_subtitle
+	text-transform: uppercase
+
+.first_space
+	@extend %lato
+
+.no_border, .table_results
+	td
+		span
+			border: none	
+
+		
+h3.horizontal_decor
+	border: none
+	color: #4c4c4c
+	@extend %lato_bold
+	letter-spacing: 0.04em 
+	padding-bottom: 0
+	text-transform: none
+
+.visible
+	display: block
+
+.invisible
+	display: none
+
+
+#reporte_proyectos
+	padding: 0 60px 0 0
+	width: 792px
+	
+	h3
+		border-bottom-color: #c3c7cb
+		color: #ee3123
+		@extend %lato_bold
+		font-size: 20px
+		text-transform: none
+	h4
+		color: #ee3123
+
+	ul.square_list
+		margin: 0 0 50px 20px
+	.proyectos_left
+		margin: 0
+		padding: 0
+		display: inline-block
+		vertical-align: top
+		width: 50%
+	.proyectos_right
+		margin: 0
+		padding: 0
+		background: url(../images/fe/proyectos_graph.jpg) no-repeat center top
+		width: 50%
+		height: 396px
+		display: inline-block
+		vertical-align: top
+
+.transparencia
+	a.download_button.first
+		margin-right: 40px
+		margin-top: 50px
+	
+	.strong_text
+		margin-left: 30px
+			
+	
+	h2	
+		border-bottom: 1px solid #969696
+		@extend %asap_bold
+		padding-bottom: 22px
+		padding-top: 53px
+		
+	h3
+		border-bottom: 2px solid #969696 
+		color: #4c4c4c
+		@extend %lato
+		font-size: 14px
+		padding: 0 0 10px
+		position: relative
+		text-transform: uppercase
+		
+		span
+			background: #ffffff
+			display: inline-block
+			width: 200px 
+			position: relative
+			z-index: 9
+			
+		span.header_middle_line
+			background: #969696
+			bottom: 10px
+			height: 1px
+			position: relative
+			width: 100%
+			z-index: 1
+			
+	.two_color_bar
+		margin: 90px 0 0
+		
+	#servicios-comunidad, #ingresos-egresos, #donativos, #recuperacion, #proyectos
+		.container
+			width: 770px
+			
+			
+.eng
+	#graph_socorrismo, #graph_medico, #graph_capacitacion, #graph_destinos, #graph_traslados, #graph_seguro
+		background-image: url(../images/fe/transparencia_sprite_eng.jpg)

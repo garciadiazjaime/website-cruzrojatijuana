@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es-419">
+<head>
+	<title>Cruz Roja Tijuana | {{section_data.gral_info.section}}</title>
+	<script type="text/javascript"> if (!window.console) console = {log: function() {}}; </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="/static/css/screen.css" />
+	<link rel="shortcut icon" type="image/png" href="/static/images/favicon.ico">
+	{% if section_data.gral_info.has_fancybox == 'true' %}
+	<link rel="stylesheet" href="/static/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	{% endif %}
+	{% if section_data.gral_info.has_timeline == 'true' %}
+	<link rel="stylesheet" href="/static/css/timeline.css" />
+	<link rel="stylesheet" href="/static/css/timeline_base.css" />
+	{% endif %}
+	<link rel="stylesheet" href="/static/css/animate-custom.css" />
+	<link href="https://developers.google.com/maps/documentation/javascript/examples/default.css" rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <style>
+    	.infoWindow
+    	{
+    		color: #000;
+    		width: 250px;
+    		height: 130px;
+    	}
+
+    	.infoWindow a{
+    		color: blue;
+    	}
+
+    	.infoWindow a:hover{
+    		text-decoration: underline;
+    	}
+    </style>
+</head>
+<body>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	  ga('create', 'UA-46086170-1', 'cruzrojatijuana.org.mx');
+	  ga('send', 'pageview');
+	</script>
+	<div id="wrapper" class="{{section_data.gral_info.section}}  {% if lang == 1 %}eng{% endif %}">
+		<div id="header">
+			{% include 'layout/header.html' %}
+		</div>
+		<div id="content">
+			{% block site_wrapper %}{% endblock %} 
+		</div>		
+		<div id="footer" class="{% if lang == 1 %}eng{% endif %} {{section_data.gral_info.section}} animated">
+			{% include 'layout/footer.html' %}
+		</div>
+		<div id="emergency_number" class="{{section_data.gral_info.section}}"><div id="em_num_wrapp"><p>Llama al 066</p></div></div>
+
+		<div id="quiero_donar_btn_wrapper" class="{{section_data.gral_info.section}} {% if lang == 1 %}eng{% endif %}">
+			<a href="/donativos/dinero" title="{% if lang == 1 %}I want to donate {% endif %}  {% if lang == 0 %} Quiero donar{% endif %} "><span>{% if lang == 1 %}I want to donate {% endif %}  {% if lang == 0 %} Quiero donar{% endif %} </span></a>
+		</div>
+	</div>
+	<div id="creditos" class="invisible">
+		<div id="credit_content">
+			<h4>{{gral_info.credits.title}}</h4>
+			<p>{{gral_info.credits.subtitle}}
+			</p>
+			<ul class="square_list">
+				<li><em>{{gral_info.credits.photo}}</em><span> Christian Vargas<br> <a href="mailto:maki.thereflex@gmail.com" title="{{gral_info.credits.write_to_alt}} Christian Vargas">maki.thereflex@gmail.com</a></span></li>
+				<li><em>{{gral_info.credits.translate}}</em><span> Melissa Michel
+					<a href="mailto:melissa.michel.m@gmail.com" title="{{gral_info.credits.write_to_alt}} Melissa Michel">melissa.michel.m@gmail.com</a>
+					<br>
+					Priscila Talavera
+					<a href="mailto:ptalaveram@live.com" title="{{gral_info.credits.write_to_alt}} Priscila Talavera">ptalaveram@live.com</a>
+				</span></li>
+				<li>
+					<em>{{gral_info.credits.history}}</em><span>
+						{{gral_info.credits.history_credit}}
+					</span>
+				</li>
+				<li>
+					<em>{{gral_info.credits.makeup}}:</em><span> Gabriela Padilla
+						<a href="mailto:gabriela.padillad@gmail.com" title="{{gral_info.credits.makeup_write}} Gabriela Padilla">gabriela.padillad@gmail.com</a>
+				</li>
+			</ul>
+		</div>
+		<div id="cred_out"></div>
+	</div>
+
+
+	<script type="text/javascript" src="/static/js/jquery-1.10.1.min.js"></script>
+	{% if section_data.gral_info.has_cycle == 'true' %}
+	<script type="text/javascript" src="/static/js/jquery.cycle.all.latest.js"></script>
+	{% endif %}
+	{% if section_data.gral_info.has_fancybox == 'true' %}
+	<script type="text/javascript" src="/static/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	{% endif %}
+	{% if section_data.gral_info.has_timeline == 'true' %}
+	<script src="/static/js/timeline-min.js"></script>
+	{% endif %}
+	
+	<script type="text/javascript" src="/static/js/extras.js" ></script>
+	<script type="text/javascript" src="/static/js/functions.js" ></script>
+	<script type="text/javascript" src="/static/js/hidden.menu.js" ></script>
+	<script type="text/javascript" src="/static/js/waypoints.min.js" ></script>
+</body>
+</html>

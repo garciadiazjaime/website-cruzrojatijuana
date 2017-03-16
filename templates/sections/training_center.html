@@ -1,0 +1,28 @@
+{% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="intro_capacitacion">
+	<div class="container">
+		<h1>{{section_data_db.0}}</h1>
+	</div>
+	<div id="capacitacion_intro_img"></div>
+</div>
+<div class="container">
+	<a href="http://www.centrodecapacitacioncruzrojatijuana.org.mx" title="{{section_data_db.5}}" target="_blank" id="capacitacion_link">www.centrodecapacitacioncruzrojatijuana.org.mx</a>
+	<div class="column half first">
+		<p>{{section_data_db.1}}</p>
+		
+		<ul class="square_list">{{section_data_db.3}}</ul>
+		<div id="primeros_auxilios_close" class="capacitacion_img"></div>
+	</div><div class="column half">
+		<div id="primeros_auxilios" class="capacitacion_img"></div>
+		<p class="big_quote">{{section_data_db.2}}</p>
+		
+		{{section_data_db.4}}
+	</div>
+</div>
+{% endautoescape %}
+{% include 'block/preparate.html' %}
+
+{% endblock %}

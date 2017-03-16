@@ -1,0 +1,166 @@
+{% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="intro_donativos">
+	<div class="container">
+		<h1>{{section_data.gral_info.title}}</h1>
+		<ul>{% for row in section_data.gral_info.tipo %}<li id="{{row.id}}"><a href="{{row.href}}" title="{{row.title}}">{{row.title}}</a></li>{% endfor %}</ul>
+	</div>
+</div>
+<div class="container">
+	<div class="side_column">
+		<ul id="donations_menu">
+			{% for row in section_data.submenu %}
+			<li id="{{row.id}}"><a href="{{row.href}}" title="{{row.alt}}"><span>{{row.title}}</span></a></li>
+			{% endfor %}
+		</ul>
+	</div><div class="main_column">
+		<p id="nota_deducibles">
+			{{section_data.gral_info.slogan}}
+		</p>
+		<span id="distinguished-benefactor-program"></span>
+		<div id="programa-benefactor-distinguido">
+			<h2>{{section_data.programa.title}}</h2>
+			<div class="column two_third first">
+				<p>{{section_data.programa.desc}}</p>
+				<ul class="square_list">
+					{% for row in section_data.programa.list %}
+					<li><span>{{row}}</span></li>
+					{% endfor %}
+				</ul>
+			</div><div class="column third">
+				<p class="big_text">{{section_data.programa.desc_b}}</p>
+				<a href="{{section_data.programa.link.href}}" title="{{section_data.programa.link.alt}}" class="plus_button" target="_blank">
+			 		{{section_data.programa.link.title}}
+				</a>
+			</div>
+		</div><span id="linea"></span><span id="money"></span>
+		<div id="donaciones-linea">
+			<h2>{{section_data.donacion.title}}</h2>
+			<div class="column two_third first">
+				<h3>{{section_data.donacion.subtitle}}
+				</h3>
+				<p>{{section_data.donacion.desc}}</p>
+			</div><div class="column third">
+				<span id="paypal_img"></span>
+				<a href="{{section_data.donacion.paypal.href}}" title="{{section_data.donacion.paypal.alt}}" target="_blank" class="plus_button">
+			 	 {{section_data.donacion.paypal.title}}
+				</a>
+			</div>
+			<div class="column two_third first">
+				<h3>{{section_data.donacion.icf.title}}</h3>
+				<ul class="square_list">
+					{% for row in section_data.donacion.icf.list %}
+					<li><span>{{row.title}}</span>{% if 'children' in row %} <ul class="square_list">
+							{% for row2 in row.children %}
+							<li><span>{{row2}}</span></li>
+							{% endfor %}
+						</ul> {% endif %}</li>
+					{% endfor %}
+				</ul>
+				
+				<p><span class="small">{{section_data.donacion.alt_text}}</span><br><br>
+					
+				<a href="{{section_data.donacion.link.href}}" title="{{section_data.donacion.link.alt}}" target="_blank">{{section_data.donacion.link.title}}</a>
+				</p>
+				
+			</div><div class="column third">
+				<span id="international-community_img"></span>
+				<a href="{{section_data.donacion.link_b.href}}" title="{{section_data.donacion.link_b.alt}}" target="_blank" class="plus_button">
+			 	 {{section_data.donacion.link_b.title}}
+				</a>
+			</div>
+		</div><span id="dinero"></span><span id="bank-account-deposit"></span>
+		<div id="deposito-cuenta-bancaria">
+			<h2>{{section_data.deposito.title}}</h2>
+			<div class="column two_third first">
+				<h3 id="mx_header">{{section_data.deposito.mx.title}}</h3>
+				<p>{{section_data.deposito.mx.banco}}</p>
+				<ul>{% for row in section_data.deposito.mx.cuentas %}<li class="square_bullet"><span>{{row.title}}<br>{{row.datos}}</span></li>{% endfor %}
+				</ul>
+			</div><div class="column third">
+				<h3 id="us_header">{{section_data.deposito.us.title}}</h3>
+				<p>{{section_data.deposito.us.banco}}</p>
+				<p class="square_bullet">{{section_data.deposito.us.cuenta}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="light_gray_container">
+	<div class="container">
+		<div class="side_column">
+		</div><div class="main_column">
+			<div id="tiempo"><span id="time"></span>
+				<h2>{{section_data.voluntariado.title}}</h2>
+				<div class="column two_third first">
+					<p>{{section_data.voluntariado.desc}}
+					<br><br>	
+					{{section_data.voluntariado.beneficios.title}}
+					</p>
+					<ul class="square_list">
+						{% for row in section_data.voluntariado.beneficios.list %}
+						<li><span>{{row}}</span></li>
+						{% endfor %}
+					</ul>
+					<p class="red_phrase">{{section_data.voluntariado.beneficios.slogan}}</p>
+				</div><div class="column third">
+					<p class="large_quote">{{section_data.voluntariado.ayuda.title}}
+					</p>
+					<a href="{{section_data.voluntariado.ayuda.link.href}}" title="{{section_data.voluntariado.ayuda.link.alt}}"  class="plus_button">
+				 	 {{section_data.voluntariado.ayuda.link.title}}
+					</a>
+					<h3>{{section_data.voluntariado.ayuda.contacto}}</h3>
+					<p>{{section_data.voluntariado.ayuda.depto}}<br><br>
+
+					<strong>{{section_data.voluntariado.ayuda.tel}}</strong><br><br>
+
+					<a href="{{section_data.voluntariado.ayuda.link_b.href}}" title="{{section_data.voluntariado.ayuda.link_b.alt}}" class="small_text">{{section_data.voluntariado.ayuda.link_b.title}}</a></p>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="side_column">
+	</div><div class="main_column">
+		<div id="especie"><span id="kind"></span>
+			<h2>{{section_data.especie.title}}</h2>
+			<div class="column two_third first">
+				<ul class="square_list">
+					{% for row in section_data.especie.list %}
+					<li><span>{{row}}</span></li>
+					{% endfor %}
+				</ul>
+			</div><div class="column third">
+				<a href="{{section_data.especie.contacto.link.href}}" title="{{section_data.especie.contacto.link.alt}}" class="plus_button">{{section_data.especie.contacto.link.title}}</a>
+				<h3>{{section_data.especie.contacto.title}}</h3>
+				<p>{{section_data.especie.contacto.desc}}<br><br>
+
+				<strong>{{section_data.especie.contacto.tel}}</strong><br><br>
+
+				<a href="{{section_data.especie.contacto.link.href}}" title="{{section_data.especie.contacto.link.alt}}" class="small_text">{{section_data.especie.contacto.link.title}}
+				</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+<!--
+<div id="benefactores" class="container">
+	<h2>{{section_data.benefactores.title}}</h2>
+	<div id="slider_benefactores">
+		<div class="slider_nav">
+			<a href="prev" title="prev" class="" id="news_prev"></a>
+			<a href="next" title="next" class="next" id="news_next"></a>
+		</div>
+		<div class="slider_screen slider_vert" data-height="217" data-position="vertical">{% for row in section_data.benefactores.list %}{% if forloop.first %}<div>{% endif %}<div class="slider_frame"><a href="{{row.href}}" title="{{row.alt}}" target="_blank" id="{{row.id}}"><span>{{row.title}}</span></a></div>{% if forloop.counter|divisibleby:'6' %}</div><div>{% endif %}{% if forloop.last %}</div>{% endif %}{% endfor %}
+		</div> 
+	</div>
+</div>
+-->
+
+{% include 'block/preparate.html' %}
+{% endautoescape %}
+{% endblock %}

@@ -1,0 +1,39 @@
+{% autoescape off %}
+<div class="container">
+	<div id="sitemap">{{footer_menu}}
+		<hr />
+		<div id="other_links">
+			<ul class="first">
+				<li class="first">
+					<a href="/{{gral_info.training_href}}" title="{{gral_info.training_title}}" class="red_next_button">{{gral_info.training_title}}</a>
+				</li><li>
+					<a href="/{{gral_info.get_ready_href}}" title="{{gral_info.get_ready_title}}">{{gral_info.get_ready_title}}</a>
+				</li><li>
+					<a href="/{{gral_info.news_href}}" title="{{gral_info.news_title}}">{{gral_info.news_title}}</a>
+				</li><li>
+					<a href="/{{gral_info.credit_href}}" title="{{gral_info.credit_title}}" class="fancybox">{{gral_info.credit_title}}</a>
+				</li>
+			</ul>
+			
+			<ul class="social">
+					<li class="facebook first"><a href="{{gral_info.facebook_href}}" title="{{gral_info.facebook_title}}" target="_blank"></a></li><li class="twitter"><a href="{{gral_info.twitter_href}}" title="{{gral_info.twitter_title}}" target="_blank"></a></li><li class="youtube"><a href="{{gral_info.youtube_href}}" title="{{gral_info.youtube_title}}" target="_blank"></a></li>
+			</ul>
+		</div>
+		
+	</div><div id="footer_extras">
+		<a href="{{gral_info.donativos.href}}" class="link_header">{{gral_info.donativos.title}}</a>
+		<p class="big_text">{{gral_info.donations_text}}</p>
+		<div id="footer_donaciones">{% for row in gral_info.donativos.tipo  %}<a href="{{row.href}}" title="{{row.title}}" class="column third {% if forloop.first %}first{% endif %}">{{row.title}}</a>{% endfor %}
+			<span class="column two_third first">
+				<a href="/{{gral_info.donations_help_href}}" title="{{gral_info.donations_help_title}}" class="plus_button">
+					{{gral_info.donations_help_title}}
+				</a>
+			</span><a href="{{gral_info.donations_paypal_href}}" title="{{gral_info.donations_paypal_aux}}" class="column third paypal_button" target="_blank">	{{gral_info.donations_paypal_title}}
+			</a>
+		</div>
+		<hr />
+		<p>{{gral_info.copyright}}</p>
+		<p id="powered">Powered by:  <a href="http://www.thinkcorporativo.com/" title="thinkcorporativo.com" target="_blank">THINK</a> / <a href="http://www.mintitmedia.com/" title="mintitmedia.com" target="_blank">Mint</a></p>
+	</div>
+</div>
+{% endautoescape %}

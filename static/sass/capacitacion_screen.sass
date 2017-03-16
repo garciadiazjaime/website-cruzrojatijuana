@@ -1,0 +1,95 @@
+#intro_capacitacion
+	background: #1b2c3f
+	@include filter-gradient(#e6f5fc, #c0dade, horizontal)
+	@include background-image(radial-gradient(center 100px, #e6f5fc, #c0dade 82%))
+	
+	height: 295px
+	margin: 0 0 80px
+	padding: 12px 0 0
+	position: relative
+	
+	
+	h1
+		border-top: 4px solid #d53230
+		color: #000000
+		display: inline-block
+		@extend %asap_bold
+		font-size: 25px
+		margin: 0
+		padding: 7px 25px 0 15px
+		position: relative
+		text-transform: uppercase
+		z-index: 5
+
+#capacitacion_intro_img
+	background: url(#{$img_fe}capacitacion_intro.png) center 45px no-repeat
+	height: 355px
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 1
+	
+#capacitacion_link
+	background: #f7f7f7 url(#{$img_fe}next_symbol.png) 92% center no-repeat
+	border: 1px solid #d3d3d3
+	border-bottom-width: 2px
+	color: #2b3e54
+	display: block
+	@extend %asap
+	font-size: 26px
+	margin: 160px 0 50px
+	padding: 20px 10px
+	text-align: center
+	
+	&:hover
+		color: lighten(#2b3e54, 10)
+
+.capacitacion_img
+	background: url(#{$img_fe}capacitacion_sprite.jpg) 0 0 no-repeat
+	height: 290px
+	margin: 0 0 40px
+	
+#primeros_auxilios_close
+	background-position: 0 -290px
+	margin: 50px 0 0
+	
+	
+.centro-capacitacion
+	font-size: 17px
+	letter-spacing: 0.03em
+	line-height: 1.4em
+	
+	#content
+		ul.square_list
+			li
+				margin-bottom: 40px
+		
+		p
+			color: #6b6b6b
+			text-align: justify
+
+		.big_quote
+			color: #333333
+			letter-spacing: 0.02em
+			margin: 75px 0 60px
+	
+		.plus_button	
+			margin: 40px  0 0 15px
+			
+		.plus_button.first
+			margin-left: 0
+	
+		ul, p
+			text-align: justify
+			width: 427px
+	
+		ul.transparent_square_list
+			@extend %lato
+			margin: 20px 0 20px -13px
+			
+			li
+				margin-bottom: 20px
+			
+		#preparate_videos
+			p, ul
+				width: auto

@@ -1,0 +1,460 @@
+.ambulancias
+	.big_text
+		color: #6b6b6b
+		font-size: 18px
+		letter-spacing: 0.03em
+		line-height: 1.25em
+		text-align: justify
+
+	.bullet_nav
+		margin-top: 20px
+
+#ambulancias_intro
+	background: #1b2c3f
+	@include filter-gradient(#006e98, #1b2c3f, horizontal)
+	@include background-image(linear-gradient(left, #006e98 , #1b2c3f))
+	height: 295px
+	margin: 0 0 80px
+	padding: 12px 0 0
+	position: relative
+	
+	
+	h1
+		border-top: 4px solid #d53230
+		color: #ffffff
+		display: inline-block
+		@extend %asap_bold
+		font-size: 25px
+		margin: 0
+		padding: 7px 15px 0
+		position: relative
+		text-transform: uppercase
+		z-index: 5
+	
+#ambulancias_intro_img
+	background: url(#{$img_fe}intro_ambulancias.png) center 25px no-repeat
+	height: 355px
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 1
+
+#acciones
+	.half.first
+		margin-right: 3%
+		width: 46%
+	
+#ambulancias_logros_slider
+	left: 20px
+	position: relative
+	
+	.slider_nav
+		z-index: 5
+		
+	.slider_vert
+		height: 150px
+		margin-right: -90px
+	
+	.slider_frame
+		color: #333333
+		@extend %asap
+		font-size: 21px
+		height: 150px
+		margin-left: 50px
+		padding: 10px 0 0 0
+		width: 100%
+		
+	em
+		color: #2b3e54
+		display: block
+		font-size: 70px
+		font-style: normal
+		line-height: 1em
+		
+	p
+		margin: 0
+		
+#equipo
+	.big_text
+		color: #6b6b6b
+		@extend %lato_bold
+		font-size: 13px
+		
+	ul
+		@extend %lato_bold
+		font-size: 15px
+		margin: 25px 0 0
+		
+	li
+		margin-bottom: 14px
+		
+		
+	h2
+		@extend %asap_bold
+		margin-bottom: 0
+	
+	.alignment_wrapp
+		padding:  0 0 0 30px
+		
+		p
+			text-align: justify
+			
+	.half.first
+		margin-right: 3%
+		width: 46%
+
+#socorrismo_slider
+	height: 200px
+	margin: 15px 0 0
+	position: relative
+	width: 430px
+	
+	.slider_frame
+		background: url(#{$img_fe}socorrismo_sprite.jpg) 0 0 no-repeat
+		height: 200px
+		width: 100%
+
+	.slider_nav
+		left: -40px
+		top: 0
+		
+	#socorr_2
+		background-position: 0 -200px
+		
+	#socorr_3
+		background-position: 0 -400px
+		
+	#socorr_4
+		background-position: 0 -600px
+		
+	#socorr_5
+		background-position: 0 -800px
+		
+	#socorr_6
+		background-position: 0 -1000px
+		
+.two_color_bar
+	background: #2b3e54
+	height: 90px
+	min-width: 942px
+	position: relative
+	width: 100%
+	
+	a
+		color: #ffffff
+		font-size: 10px
+		letter-spacing: 0.03em
+		text-transform: uppercase
+	
+	
+	.column.half
+		padding-bottom: 0
+	
+	.column.first
+		text-align: right
+		
+	.container
+		margin-top: -60px
+		
+	a.horizontal_prev, a.horizontal_next
+		background-position: right -607px
+		padding: 8px 50px 5px 0
+		
+		&:hover
+			background-position: right -1319px
+	
+	a.horizontal_next
+		background-position: left -755px
+		padding: 8px 0 5px 50px
+		
+		&:hover
+			background-position: left -1578px
+	
+		
+	.dark_color_bar
+		background: #213245
+		height: 100%
+		margin-right: -50%
+		min-width: 471px
+		width: 50%
+	
+	
+	
+	
+.concreto
+	background: transparent
+
+#equipo_slider
+	background: #518fca
+	position: relative
+	width: 100%
+	
+	.slider_nav
+		left: auto
+		top: 570px
+		width: 942px
+		z-index: 8
+	
+		a
+			background: url(#{$img_fe}horizontal_nav.png) 0 0 no-repeat
+			height: 38px
+			top: 0
+			width: 38px
+			
+			&:hover
+				background-position: 0 -286px
+			
+		a.next
+			background-position: 0 -143px
+			left: auto
+			right: 0
+			top: 0
+			
+			&:hover
+				background-position: 0 -429px
+			
+	
+	.slider_vert, slider_hor
+		min-width: 100%
+		width: 100%
+		
+	.slider_frame
+		width: 100%
+
+
+#equipo_materiales
+	.square_list
+		span
+			background: url(#{$img_fe}equipo_materiales_icons.png) 0 0  no-repeat
+			color: #fff
+			display: inline-block
+			min-height: 60px
+			padding: 0 0 0 50px
+			vertical-align: top
+			
+		strong
+			display: block
+	
+	#localizador
+		span
+			background-position: 0 -220px
+	
+	.fondo
+		background: url(#{$img_fe}equipo_materiales.jpg) center top no-repeat
+		background-size: cover
+		min-height: 715px
+		padding: 85px 0 0
+		
+#equipo_unidades
+
+	hr
+		background-color: #ffffff
+		
+	.square_list
+		overflow: hidden
+		margin: 33px 0 0
+		padding: 0 0 0 27%
+		text-align: left
+		
+		li.first
+			margin-left: 0
+		
+		li
+			float: left
+			margin-left: 130px
+			vertical-align: top
+			
+		span
+			color: #ffffff
+			font-size: 20px
+			padding: 0 0 0 10px
+			
+	.fondo
+		background: url(#{$img_fe}equipo_unidades.jpg) center top no-repeat
+		background-size: cover
+		height: 715px
+		padding: 85px 0 0
+		
+.concreto
+	
+	.container
+		position: relative
+		
+	.slider_horz
+		margin: 0 auto
+		
+#lista_el
+	height: 195px
+	left: 10px
+	position: absolute
+	top: 10px
+	width: 245px
+	
+	li
+		background: #d53230
+		@include border-radius(100px)
+		color: #ffffff
+		@extend %lato_bold
+		padding: 5px
+		position: absolute
+		text-align: center
+		width: 19px
+		
+		&:hover
+			background: lighten(#d53230, 7)
+			cursor: pointer
+		
+	#list_carro
+		left: 393px
+		top: 380px
+	
+	#list_ferula
+		left: 526px
+		top: 402px
+	
+	#list_mochila
+		left: 477px
+		top: 303px
+	
+	#list_ventilador
+		left: 453px
+		top: 401px
+	
+	#list_equipo_blanco
+		left: 460px
+		top: 363px
+	
+	#list_equipo
+		left: 330px
+		top: 352px
+	
+	#list_oxigeno
+		left: 340px
+		top: 297px
+	
+	#list_accesorios
+		left: 365px
+		top: 255px
+	
+#lista_elementos
+	position: absolute
+	right: -10px
+	top: 278px
+
+	ul
+		background: url(#{$img_fe}lista_elementos_globo.png) left 20px no-repeat
+		padding: 0 0 0 10px
+		width: 295px
+	
+	li
+		background: #ffffff
+		display: none
+		padding: 20px
+
+	li.visible
+		display: block
+		
+	.ambulance_number
+		background: #d53230
+		@include border-radius(100px)
+		color: #ffffff
+		display: inline-block
+		@extend %lato_bold
+		margin: 0 10px 0 0
+		padding: 5px
+		text-align: center
+		vertical-align: top
+		width: 19px
+		
+	em, .ambulance_column
+		display: inline-block
+		@extend %lato_bold
+		font-style: normal
+		padding: 5px 0 0
+		vertical-align: top
+		width: 215px
+		
+	.ambulance_column
+		em
+			display: block
+			
+		ul
+			background: transparent
+			padding: 0
+			width: auto
+			
+		li
+			background: transparent
+			display: block
+			@extend %lato
+			padding: 0
+			
+		
+#bot_listado_unidades	
+	margin: 0  0 -40px
+	position: relative
+	z-index: 6
+	
+	h2
+		background: #d53230 url(#{$img_fe}down_arrow.png) right 5px no-repeat
+		color: #fff
+		cursor: pointer
+		@extend %lato_bold
+		font-size: 12px
+		margin: 0 0 -20px
+		padding: 12px 0
+		position: relative
+		text-align: center
+		text-transform: uppercase
+		top: -20px
+		
+#listado_unidades
+	background: #d0e2e9
+	@include filter-gradient(#d0e2e9, #ffffff, horizontal)
+	@include background-image(linear-gradient(left, #d0e2e9 , #ffffff 50%, #d0e2e9))
+	position: relative
+	z-index: 5
+		
+	ul.square_list
+		margin: 0 0 0 -15px
+		
+		li
+			margin-bottom: 15px
+		
+		ul.square_list
+			color: #D53230
+			margin-left: 0
+			margin-top: 0
+			
+		ul
+			color: #6B6B6B
+			margin: 0
+			
+			
+#bases-ambulancia2
+
+	ul.square_list	
+	
+		span
+			color: #b2b2b2
+			
+		li.active
+			span
+				color: #ffffff
+			
+	p
+		margin-left: 15px
+		
+	.bullet_nav
+		margin-top: 20px
+		
+#bloque_listado_unidades
+	padding: 20px 15px 0
+	
+.close
+	height: 0
+	
+	
+	
+#bases_nav
+	margin-top: 10px

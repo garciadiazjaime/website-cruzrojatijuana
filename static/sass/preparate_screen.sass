@@ -1,0 +1,415 @@
+#intro_preparate
+	background: #1b2c3f
+	@include filter-gradient(#cc6c32, #e89d3b, horizontal)
+	@include background-image(radial-gradient(center 100px, #e89d3b, #cc6c32 82%))
+	
+	height: 295px
+	margin: 0 0 80px
+	padding: 12px 0 0
+	position: relative
+	
+	h1
+		border-top: 4px solid #d53230
+		color: #ffffff
+		display: inline-block
+		@extend %asap_bold
+		font-size: 25px
+		margin: 0
+		padding: 7px 55px 0 15px
+		position: relative
+		text-transform: uppercase
+		z-index: 5
+
+#preparate_intro_img
+	background: url(#{$img_fe}preparate_intro.png) center 119px no-repeat
+	height: 355px
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 1
+
+#preparate_menu
+	background: #f7f7f7
+	border: 1px solid #d3d3d3
+	margin: 0 0 50px
+	padding: 20px 10px 0
+	
+	ul
+		border-top: 1px solid #969696
+		margin: 0
+		padding: 10px 0 20px
+		
+	li
+		background: transparent url(#{$img_fe}preparate_sprite.png) 8px 6px no-repeat
+		@extend %lato_bold
+		font-size: 10px
+		margin: 0 -10px
+		padding: 12px 0
+		text-transform: uppercase
+		
+		&:hover
+			background-color: #e8e8e8
+		
+		span
+			display: block
+			padding: 0 0 0 45px
+			
+	#men_inundaciones
+		background-position: 8px -85px
+		
+	#men_terremoto
+		background-position: 8px -167px
+		
+	#men_paro-adulto
+		background-position: 8px -285px
+		
+	#men_paro-bebe
+		background-position: 8px -405px
+		
+	#men_sangrado
+		background-position: 8px -510px
+
+	#men_envenenamiento
+		background-position: 8px -610px
+
+	#men_quemaduras
+		background-position: 8px -708px
+			
+	#men_quemaduras-elect
+		background-position: 8px -804px
+			
+	#men_fracturas
+		background-position: 8px -915px
+			
+	#men_atragantamiento
+		background-position: 8px -1044px
+			
+	#men_ataque
+		background-position: 8px -1172px
+			
+	#men_calor
+		background-position: 8px -1287px
+			
+	#men_frio
+		background-position: 8px -1427px
+			
+	#men_seg-vial
+		background-position: 8px -1546px
+			
+		
+#descarga_manual
+	background: #f7f7f7
+	border: 1px solid #d3d3d3
+	@extend %lato_bold
+	font-size: 10px
+	padding: 20px 10px
+	
+	a
+		background: url(#{$img_fe}dowload_arrow.png) right center no-repeat
+		display: block
+		padding: 0 50px 0 0
+		text-transform: uppercase
+		
+	p
+		color: #d53230
+		font-size: 14px
+		margin: 10px 0 0
+		
+#instructions_paragraph
+	color: #2d2d2d
+	@extend %lato_bold
+	font-size: 20px
+	
+.preparate
+	h2
+		background: #f7f7f7
+		border: 1px solid #d3d3d3
+		border-bottom: 2px solid #969696
+		margin: 20px 0 50px
+		padding: 6px 40px 6px 0
+		text-align: center
+		
+		span
+			background: url(#{$img_fe}preparate_big_sprite.png) 0 0 no-repeat
+			display: inline-block 
+			padding: 6px 0 7px 70px
+	
+	h3
+		font-size: 16px
+		margin: 20px 0 18px
+		
+	ul.square_list
+		text-align: justify
+		margin:  0 0 40px -15px
+
+#caso_inundaciones 
+	h2 
+		span
+			background-position: 0 -125px
+
+#caso_terremoto 
+	h2 
+		span
+			background-position: 0 -250px
+
+#caso_paro-adulto
+	h2 
+		span
+			background-position: 0 -377px
+
+#caso_paro-bebe
+	h2 
+		span
+			background-position: 0 -502px
+
+#caso_sangrado
+	h2 
+		span
+			background-position: 0 -628px
+
+#caso_envenenamiento
+	h2 
+		span
+			background-position: 0 -754px
+
+#caso_quemaduras
+	h2 
+		span
+			background-position: 0 -880px
+
+#caso_quemaduras-elect
+	h2 
+		span
+			background-position: 0 -1010px
+
+#caso_fracturas
+	h2 
+		span
+			background-position: 0 -1136px
+
+#caso_atragantamiento
+	h2 
+		span
+			background-position: 0 -1261px
+
+#caso_ataque
+	h2 
+		span
+			background-position: 0 -1386px
+
+#caso_calor
+	h2 
+		span
+			background-position: 0 -1511px
+			text-align: left
+			width: 80%
+
+#caso_frio
+	h2 
+		span
+			background-position: 0 -1634px
+
+#caso_seg-vial
+	h2 
+		span
+			background-position: 0 -1770px
+		
+.important_phrase
+	color: #d53230
+	@extend %lato_bold
+	font-size: 20px
+	padding: 10px 0 0
+	
+.preparate-img
+	background: url(#{$img_fe}preparate_sprite.jpg) 0 0  no-repeat
+	height: 271px
+	margin: 0 0 40px
+	width: 208px
+	
+	
+.preparate-img.incendio
+	background-position: 0 0
+	
+#clases_incendios
+	border: 2px solid #000000
+	margin: 0 65px
+	
+	li
+		background: url(#{$img_fe}tipos_incendio.jpg) 25px 15px no-repeat
+		border-top: 2px dashed #000000
+		padding:  15px 15px 15px 90px
+		
+	.problema, .solucion
+		display: inline-block
+		font: 12px Arial, sans-serif
+		vertical-align: top
+		width: 220px
+		
+		strong
+			font-family: Arial, sans-serif
+			font-weight: bold
+		
+	.problema
+		margin: 0 10px 0 0 
+		
+	#in_combustion
+		border: none
+		
+	#in_inflamable
+		background-position: 25px -105px
+	
+	#in_electrico
+		background-position: 25px -220px
+		
+#guia_extintor
+	color: #000000
+	font: 11px Arial, sans-serif
+	margin: 20px 0 0 140px
+	width: 415px
+	
+	li
+		background: url(#{$img_fe}guia_extinguidor.jpg) right 10px no-repeat
+		padding: 20px 110px 15px 0
+		
+	#guia_apunta
+		background-position: right -140px
+		margin-bottom: 10px
+		
+	#guia_aprieta	
+		background-position: right -285px
+		margin-bottom: 15px
+		
+	#guia_cubre	
+		background-position: right -420px
+		
+	strong
+		display: block
+		font-size: 12px
+		
+.circle_list
+	color: #323232
+	list-style-type: disc
+	margin: 10px 0 0 4px
+	padding:  0 0 0 10px
+	
+#men_incendio_cont, #men_calor_cont
+		
+	h3
+		color: #d53230
+		
+	h4
+		color: #323232
+
+#men_inundaciones_cont
+	.important
+		margin-bottom: 140px
+		
+.important, .preparate h3.important
+	color: #d53230
+	@extend %lato_bold
+
+em.important, h3.important
+	font-style: normal
+
+.big
+	font-size: 16px
+	
+	
+.preparate_img
+	background: url(#{$img_fe}preparate_img.jpg) 0 0 no-repeat
+	height: 200px
+	width: 100%
+	
+#paro_2
+	background-position: 0 -335px
+	
+	
+#paro_3
+	background-position: 0 -630px
+	
+	
+#paro_4
+	background-position: -40px -920px
+		
+#sangrado_1		
+	background-position: 0 -1280px
+	height: 300px
+
+
+#fractura_1
+	background-position: 0 -1720px
+
+#atragantamiento_1
+	background-position: 0 -2110px
+
+#atragantamiento_2
+	background-position: -250px -2530px	
+
+#corazon_1
+	background-position: -255px -2912px	
+
+#electricidad_1, #electricidad_2	
+	height: 30px	
+	margin: -30px 0 0
+	padding: 160px 0 50px
+	
+	p
+		font: bold 12px Arial, sans-serif
+		margin: 0 auto
+		text-align: center
+		width: 45%
+
+#electricidad_1
+	background-position: 0 -3242px
+	
+#electricidad_2
+	background-position: 0 -3592px
+	
+	p
+		text-align: left
+
+#men_quemaduras_cont
+	table
+		background: transparent
+		border-collapse: collapse
+		font: 12px Arial, sans-serif
+	
+	th, td
+		padding: 15px 20px
+		vertical-align: top
+	
+	th
+		border-bottom: 1px dashed #000000 
+		font-weight: bold
+	
+	.col_clasificacion
+		width: 28%
+		
+	.col_descripcion
+		width: 40%
+
+
+#men_calor_cont
+	h2
+		font-size: 28px
+
+.col_clasificacion, .col_descripcion, .col_instrucciones
+	padding: 13px 20px
+	
+.col_clasificacion
+	width: 20%
+	
+.col_descripcion
+	width: 30%
+				
+.preparate
+
+	h3, h4		
+		@extend %lato_bold
+		font-size: 16px
+	
+	h3
+		color: #323232
+		
+	p
+		text-align: justify

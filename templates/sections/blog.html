@@ -1,0 +1,51 @@
+{% extends "layout/base.html" %}
+{% load pages_tags %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="intro_noticias">
+	<h1 class="container">
+		Noticias
+	</h1>
+</div>
+<div class="container">
+
+	<div class="main_news_column">
+		{% for row in bp %} {{row.blog_post_detail}}
+		<div class="news_block">
+			<div class="news_data">
+				<p class="date">15 marzo</p>
+				<p class="author">Por: <span>Dirección CR</span></p>
+				<a href="noticias/banco-de-sangre" title="Banco de sangre" class="category">Banco de sangre</a>
+				<div class="social_share">
+					<p>Compartir</p>
+					<ul>
+						<li class="first facebook"><a href="#" title="Compártelo en facebook">Facebook</a></li><li class="twitter"><a href="#" title="Compártelo en Twitter">Twitter</a></li>
+					</ul>
+				</div>
+			</div><div class="news_body">
+				<h2><a href="/noticias/permalink123" title="Lee más de esta noticia">Arranca Colecta Escolar de 
+				Cruz Roja Tijuana</a></h2>
+				<img src="/static/images/fe/news/preview_image_placeholder.jpg" alt="placeholder">
+				<p>Tijuana. Baja California a marzo 2013.- a Escuela Primaria Alba Roja fue sede del arranque de la Colecta Escolar de Cruz Roja Delegación Tijuana, en la que participarán más de 356 mil alumnos, quienes recibirán diversos incentivos de parte del equipo de fútbol Club Tijuana Xolos.</p>
+
+				<p>Durante el “banderazo” inicial, el Presidente del Consejo Directivo de la Benemérita Institución, Lic. Salvador Gutiérrez González, resaltó que la cooperación del Sistema Educativo Estatal (SEE), es de gran importancia para alcanzar la meta que este año es de cinco millones de pesos.</p>
+
+				<a href="/noticias/permalink123" title="Lee más de esta noticia" class="plus_button">Continuar leyendo</a>
+			</div>
+		</div>
+		{% endfor %}
+	</div><div class="side_data_column">
+		<h3>Categorías</h3>
+		<ul id="category_list">
+			<li><a href="noticias/donativos" title="Ver noticias de la categoría donativos">Donativos</a><li>
+			<li><a href="noticias/hospital" title="Ver noticias de la categoría hospital">Hospital</a><li>
+			<li><a href="noticias/campanas" title="Ver noticias de la categoría campañas">Campañas</a><li>
+			<li><a href="noticias/eventos" title="Ver noticias de la categoría eventos">Eventos</a><li>
+		</ul>
+		<h3>Archivo</h3>
+		<p id="archive_list">Seleccionar Mes</p>
+	</div>
+</div>
+{% endautoescape %}
+{% endblock %}

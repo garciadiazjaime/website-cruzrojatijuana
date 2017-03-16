@@ -1,0 +1,23 @@
+<div id="preparate_videos" class="animated">
+	<div class="container">
+	<div class="column thin_half first">
+		<h2><a href="{{section_data.preparate.href}}" title="{{section_data.preparate.title}}">{{section_data.preparate.title}}</a></h2>
+		<p class="justify">{{section_data.preparate.desc}}
+		</p>
+		<p><strong>{{section_data.preparate.pregunta}}</strong>
+		</p>
+		<div id="emerg_{{section_data.preparate.class}}" class="prepare_emergency"> 
+			<h3><a href="{{section_data.preparate.tema_href}}" title="{{section_data.preparate.tema}}">{{section_data.preparate.tema}}</a></h3>
+			<p><strong>{{section_data.preparate.tema_respuesta_intro}}</strong><br />
+			{{section_data.preparate.tema_respuesta_desc}}</p>
+			<p>{{section_data.preparate.tema_respuesta_cierre}}</p>
+		</div>
+		<a href="{{section_data.preparate.mas_href}}" title="{{section_data.preparate.mas}}" class="plus_button">{{section_data.preparate.mas}}</a>
+	</div><div class="column thin_half">
+		<h2>{{gral_info.video.title}}</h2>
+		<p>{{gral_info.video.subtitle}}</p>
+		<div id="video_wrapp"></div>
+		<a href="{{gral_info.video.mas_href}}" target="_blank" title="{{gral_info.video.mas}}" class="plus_button youtube_icon">{{gral_info.video.mas}}</a>
+	</div>
+	</div>
+</div>

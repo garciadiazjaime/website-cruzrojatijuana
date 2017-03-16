@@ -1,0 +1,266 @@
+.nosotros
+	font-size: 17px
+	
+	h1
+		display: none
+		
+	h2
+		@extend %asap_bold
+		
+	p
+		line-height: 1.4em
+		text-align: justify
+	
+	.big_text
+		color: #6b6b6b
+		font-size: 17px
+		
+#mision
+	background: #d0e2e9
+	@include filter-gradient(#d0e2e9, #f9fcfc, horizontal)
+	@include background-image(linear-gradient( left,  #d0e2e9, #ecf3f6 20%, #f9fcfc 50%,#ecf3f6 80%, #d0e2e9 ))
+	padding: 30px  0
+	
+#mission_phrase
+	background: url(#{$img_fe}red_cros_big_icon.png) left 28px no-repeat
+	color: #656565
+	@extend %asap
+	font-size: 65px
+	line-height: 1em
+	margin: 0 0 0 103px
+	padding: 21px 0 0 70px
+	
+
+#siete-principios-cruz-roja, #principios_color, #bandera_principios, #siete-principios-cruz-roja .container
+	position: relative
+	
+#siete-principios-cruz-roja, #bandera_principios
+	height: 780px
+
+#siete-principios-cruz-roja 
+	color: #ffffff
+	height: 497px
+	margin: 0 0 100px
+	padding: 100px 0 0
+	
+	.big_text
+		color: #ffffff
+		margin: 40px 0 0
+		text-align: justify
+
+	h2
+		color: #ffffff
+
+	.container
+		background: transparent
+		z-index: 6
+
+#principios_list
+	background: rgba(0,0,0,.4)
+	bottom: 0
+	position: absolute
+	width: 100%
+	z-index: 3
+	
+	.container
+		height: auto
+	
+	ul
+		padding: 30px 0
+		
+		li
+			background: url(#{$img_fe}nosotros_sprite.png) 0 0 no-repeat
+			display: inline-block
+			padding: 80px 0 0 
+			vertical-align: top
+			width: 14%
+			
+		#prin_imparcialidad
+			background-position: -132px 0
+			
+		#prin_neutralidad
+			background-position: -279px 0
+			
+		#prin_independendiente
+			background-position: -413px 0
+			
+		#prin_voluntariado
+			background-position: -556px 0
+			
+		#prin_unidad
+			background-position: -698px 0
+			padding: 80px 0 0 18px
+			width: 11.5%
+			
+		#prin_universalidad
+			background-position: -835px 0
+			
+			
+	
+#principios_color
+	background: #4178b2
+	height: 596px
+	left: 0
+	position: absolute
+	top: 0
+	width: 100%
+	z-index: 1
+	
+#bandera_principios
+	background: url(#{$img_fe}nosotros_bandera.png) center bottom no-repeat
+	position: absolute
+	left: 50%
+	margin-left: -50%
+	top: -183px
+	z-index: 3
+	width: 100%
+	z-index: 3
+
+#voluntariado
+		
+	h3
+		color: #d53230
+		@extend %asap_italic
+		font-size: 31px
+		letter-spacing: 0.03em
+		
+	ul.square_list
+		margin-left: 10px
+	
+	p.big_quote
+		letter-spacing: 0
+		line-height: 1.2em
+		margin: 70px 0 0 95px
+		padding: 15px 0 0 75px
+		text-align: left
+		
+	
+
+	#voluntariado_wrapp
+		font-size: 14px
+		margin: 20px 0 0 170px
+
+		h3
+			color: #6b6b6b
+			@extend %lato_bold
+			font-size: 14px
+			margin: 0 0 10px
+
+#voluntariado_sumate
+	background: url(#{$img_fe}voluntarios_icono.png) 0 0  no-repeat
+	margin: 30px 0 0 170px
+	padding: 7px 0 15px 80px
+	
+		
+#institucionalidad-transparencia
+	a.plus_button
+		margin-left: 90px
+		text-align: left
+	
+	.half.first
+		margin-right: 7%
+		padding-right: 0
+		text-align: left
+		width: 52%
+
+	.half
+		text-align: left
+		width: 40%
+
+#img_transparencia
+	background: url(#{$img_fe}nosotros_sprite.png) 0 -280px no-repeat
+	height: 192px
+	margin: 25px 0 70px 83px
+	width: 217px
+	
+#team_slider
+	height: 290px
+	overflow: hidden
+	position: relative
+	
+	.slider_nav
+		left: 465px
+		top: 0
+	
+	.slider_frame
+		background: url(#{$img_fe}equipo_trabajo_sprite.jpg) 0 0 no-repeat
+		height: 290px
+		width: 430px
+		
+	#team_2
+		background-position: 0 -290px
+	
+	#team_3
+		background-position: 0 -580px
+	
+	#team_4
+		background-position: 0 -870px
+	
+	#team_5
+		background-position: 0 -1160px
+	
+	#team_6
+		background-position: 0 -1450px
+		
+#equipo-trabajo
+	h3
+		color: #d53230
+		@extend %lato
+		font-size: 23px
+		text-transform: uppercase
+		
+	.half.first
+		margin-right: 7%
+		padding-right: 0
+		width: 52%
+		
+	.half
+		width: 40%
+		
+		.half.first
+			margin-right: 2%
+			padding-right: 2%
+			width: 46%
+		
+		.half
+			width: 44%
+	ul
+		font-size: 15px
+		
+		span
+			color: #414040
+	
+	ul.square_list
+		font-size: 15px
+		letter-spacing: .03em
+		margin-top: 5px
+		
+		span
+			color: #6B6B6B
+
+h3#consejo
+	color: #606060
+	margin: 225px 0 0
+
+.eng
+		
+	#mission_phrase
+		font-size: 53px
+		
+/* ---------------- Timeline ------------------------ */
+
+#timeline_wrapp
+	height: 693px
+
+	h2
+		color: #ffffff
+		@extend %asap
+		font-size: 45px
+		
+		.small
+			display: block
+			font-size: 24px
+			
+			
+			
+			

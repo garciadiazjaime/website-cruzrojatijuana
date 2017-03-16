@@ -1,0 +1,150 @@
+
+{
+    "timeline":
+    {
+        "headline":"1943",
+        "type":"default",
+        "startDate":"1943",
+        "text":"It all started in 1943, when a group of committed people from Tijuana decided to initiate the process of establishing a Red Cross Delegation. Testimonies show that years before, the community had received benefits from this institution service, mainly in emergency situations, without being officially recognized.",
+        "asset":
+        {
+            "media":"/static/images/timeline/CR-1943.jpg",
+            "credit":"",
+            "caption":""
+        },
+        "date": [
+            {
+                "startDate":"1944",
+                "headline":"Our Delegation was officially recognized by the Mexican Red Cross between the months of March and April of 1944.",
+                "text":"The first official chairman of the Delegation was Mr. Silverio I. Romero Irigoyen. The first location of the Delegation was adjacent to the former City Hall, between 2nd St. and Constitución. This location was the headquarters until 1964; ambulance services, medical emergencies and drugstore were provided there.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1944.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1952",
+                "headline":"Por conducto de la Profesora Carmen Estrella",
+                "text":"Thanks to the teacher Carmen Estrella de Valencia, the first Red Cross School of Infirmary was established in Tijuana. At the same time and to support the community until the mid 70’s, many people in collaboration with Mrs. Valencia, funded the Youth’s Red Cross.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1952.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1964",
+                "headline":"The Delegation leaves the City Hall facilities",
+                "text":"The Delegation leaves the City Hall facilities, relocating at 11th St.; on May 8th, the Delegation re-opened.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1964.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1968",
+                "headline":"During this year, the second and third floors of the hospital were opened.",
+                "text":"The services offered in this hospital were: ambulance services, medical emergencies, blood bank, laboratories, drugstore, X-rays, general medicine, pediatrics, surgery and gynecology, as well as the Youth Committee and Infirmary School that were already in existence. ",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1968.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1977",
+                "headline":"Gracias a la labor realizada por el Sr. Efrén H. Cuellar",
+                "text":"Thanks to the work done by Mr. Efrén H. Cuellar, the School of Emergency Services No. 63 \"Comandante Lucio Onofre González\" was established. Nowadays, the Training Coordination is the representative of the school.<br/>The active part of the emergency services in cases of disaster situations of Tijuana, supported the community during that year’s flood and in 1980.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1977.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1981",
+                "headline":"Nuestra Delegación fue sede de la XVI Convención Nacional",
+                "text":"Our Delegation was the venue of the XVI National Convention of the Mexican Red Cross. Mr. José Barroso Chávez was the Chairman of the Board of Directors.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1981.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1983",
+                "headline":"La coordinación de Cruz Roja de la Juventud inició nuevamente actividades",
+                "text":"The coordination of the Youth’s Red Cross re-started operations, encouraging children and teenagers to participate as volunteers through institutional philosophy and community service programs.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1983.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1985",
+                "headline":"Colaboración con la Cruz Roja Mexicana a las víctimas",
+                "text":"The Mexican Red Cross collaborated with the victims of the Mexico City earthquake; as well as the coastlines of Jalisco, Michoacán, and Guerrero.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1985.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1992",
+                "headline":"El rápido crecimiento de nuestra ciudad",
+                "text":"The quick development of the city plus a greater demand of the emergency services was the reason to relocate the headquarters of the Delegation to its current location in 3ª Etapa of Zona del Río. Here is where the Trauma Center can be found, it is considered number two in quality for its facilities.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1992.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1993",
+                "headline":"Nuestro gran equipo de socorros para casos de desastre",
+                "text":"Our great emergency services team for disaster situations supported the community in the flood that occurred in 1993.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1993.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1994",
+                "headline":"Voluntarios de la Delegación participaron en las labores",
+                "text":"Volunteers of the Delegation helped in the search and location after the earthquakes in Los Angeles. This activity was part of the contribution made by the Mexican Red Cross to the American Red Cross. <br /> That same year, a volunteer participated in a Basic Course of Delegates Training given by the International Committee of the Red Cross and the Federation.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1994.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2004",
+                "headline":"El 11 de octubre se inauguró la primera etapa del Centro de Capacitación",
+                "text":"On October 11th, the first phase of the Training Center and Ambulance Station located on the old building of 11th St. was opened.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-2004.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            }
+        ]
+    }
+}

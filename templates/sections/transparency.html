@@ -1,0 +1,324 @@
+{% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+
+{% include 'block/intro_transparencia.html' %}
+<div id="servicios-comunidad" class="{% if tag in 'servicios-comunidad,community-service' %}visible{% else %}invisible{% endif %}">
+	<div class="container">
+		<h2>{{section_data_db.0}}</h2>
+		<span id="graph_socorrismo" class="trans_graph"></span>
+		<div class="hidden">
+			<h3>{{section_data_db.84}}</h3>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.3}}
+				{{section_data_db.4}}
+			</table>
+			<p>{{section_data_db.5}}</p>
+		</div><!--
+		<h3 class="horizontal_decor"><span>{{section_data_db.6}}</span> <span class="header_middle_line"></span></h3>-->
+		<span id="graph_medico" class="trans_graph"></span>
+		<div class="hidden">
+			<h4>{{section_data_db.7}}</h4>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.8}}
+				{{section_data_db.9}}
+			</table>
+			<p>{{section_data_db.10}}</p>
+		
+			<h4>{{section_data_db.11}}</h4>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.12}}
+				{{section_data_db.13}}
+			</table>
+			<p>{{section_data_db.14}}</p>
+			
+		
+			<h4>{{section_data_db.15}}</h4>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.16}}
+				{{section_data_db.17}}
+			</table>
+			<p>{{section_data_db.18}}</p>
+			
+		
+			<h4>{{section_data_db.19}}</h4>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.20}}
+				{{section_data_db.21}}
+			</table>
+			<p>{{section_data_db.22}}</p>
+			
+		
+			<h4>{{section_data_db.96}}</h4>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.23}}
+				{{section_data_db.24}}
+			</table>
+			<p>{{section_data_db.25}}</p>
+			
+		
+			<h4>{{section_data_db.26}}</h4>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.27}}
+				{{section_data_db.28}}
+			</table>
+			<p>{{section_data_db.29}}</p>		
+		</div>
+			
+		<h3 class="horizontal_decor"><span>{{section_data_db.30}}</span> <span class="header_middle_line"></span></h3>
+		
+		<span id="graph_capacitacion" class="trans_graph"></span>
+		
+		<div class="hidden">
+			<h4>{{section_data_db.31}}</h4>
+			<table>
+				{{section_data_db.2}}
+				{{section_data_db.32}}
+				{{section_data_db.33}}
+			</table>
+			<p>{{section_data_db.34}}</p>
+		</div>
+		
+		
+	
+			<h3>{{section_data_db.35}}</h3>
+			
+			<span id="graph_destinos" class="trans_graph"></span>
+			<div class="hidden">
+				<table>
+					{{section_data_db.36}}
+				</table>
+			</div>
+		<!--<div class="column half">
+			<h3>{{section_data_db.37}}</h3>
+		
+			<span id="graph_traslados" class="trans_graph"></span>
+			<div class="hidden">
+				<table>
+					{{section_data_db.38}}
+				</table>
+			</div>
+		</div>-->
+		
+		
+		<h3>{{section_data_db.39}}</h3>
+		
+		<span id="graph_seguro" class="trans_graph"></span>
+		<div class="hidden">
+			<table>
+				{{section_data_db.40}}
+			</table>
+		</div>
+	</div>
+	<div class="two_color_bar">
+		<div class="dark_color_bar">
+		</div>
+		<div class="container">
+			{{section_data_db.41}}
+		</div>
+	</div>
+</div>
+<div id="ingresos-egresos" class="{% if tag in 'ingresos-egresos,income-outcome' %}visible{% else %}invisible{% endif %}">
+	<div class="container">
+		<h2>{{section_data_db.42}}</h2>
+		<table id="resultados_generales">
+			{{section_data_db.43}}
+		</table>
+		
+		
+		<h2>{{section_data_db.44}}</h2>
+		
+		<table>
+			<tr class="table_headers"><th></th> <th></th> <th>2013</th> <th>2012</th> <th>+/-</th></tr>
+			
+			<tr><td><span class="first">64%</span></td> <td><span class="table_subtitle">{{section_data_db.45}}</span></td> <td><span>44,555,700</span></td> <td><span>41,508,023</span></td> <td><span class="last">7%</span></td></tr>
+			
+			<tr><td><span class="first">22%</span></td> <td><span class="table_subtitle">{{section_data_db.46}}</span></td> <td><span>17,898,709</span></td> <td><span>16,151,247</span></td> <td><span class="last">11%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.47}}</span></td> <td><span>8,651,471</span></td> <td><span>8,167,807</span></td><td><span class="last">6%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.48}}</span></td> <td><span>9,247,238</span></td> <td><span>7,824,226</span></td><td><span class="last">18%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.49}}</span></td> <td><span>0</span></td> <td><span>159,214</span></td><td><span class="last negative_number">-100%</span></td></tr>
+			
+			<tr><td><span class="first">5%</span></td> <td><span class="table_subtitle">{{section_data_db.50}}</span></td> <td><span>4,655,543</span></td> <td><span>4,974,237</span></td> <td><span class="last negative_number">-6%</span></td></tr>
+			
+			<tr><td><span class="first">6%</span></td> <td><span class="table_subtitle">{{section_data_db.51}}</span></td> <td><span>5,345,000</span></td> <td><span>4,831,171</span></td> <td><span class="last">11%</span></td></tr>
+			
+			<tr><td><span class="first">5%</span></td> <td><span class="table_subtitle">{{section_data_db.52}}</span></td> <td><span>5,928,940</span></td> <td><span>4,543,789</span></td> <td><span class="last">31%</span></td></tr>
+			
+			<tr><td><span class="first">0%</span></td> <td><span class="table_subtitle">{{section_data_db.53}}</span></td> <td><span>467,818</span></td> <td><span>511,716</span></td> <td><span class="last negative_number">-9%</span></td></tr>
+			
+			<tr class="table_results"><td colspan="2"><span class="table_title first">{{section_data_db.54}}</span></td><td><span>76,015,333</span></td><td><span>72,520,183</span></td><td><span>5%</span></td></tr>
+			
+		</table>
+		
+		<h2>{{section_data_db.55}}</h2>
+		
+		<table>
+			<tr class="table_headers"><th></th> <th></th> <th>2013</th> <th>2012</th> <th>+/-</th></tr>
+			
+			<tr><td><span class="first">46%</span></td> <td><span class="table_subtitle">{{section_data_db.56}}</span></td> <td><span>34,720,322</span></td> <td><span>38,420,787</span></td> <td><span class="last negative_number">-10%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.57}}</span></td> <td><span>28,199,971</span></td> <td><span>34,520,065</span></td><td><span class="last">72%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.58}}</span></td> <td><span>6,517,543</span></td> <td><span>3,799,244</span></td><td><span class="last">72%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space border ">{{section_data_db.59}}</span></td> <td><span>2,808</span></td> <td><span>101,478</span></td><td><span class="last negative_number">-97%</span></td></tr>
+			
+			<tr><td><span class="first">34%</span></td> <td><span class="table_subtitle">{{section_data_db.60}}</span></td> <td><span>25,387,285</span></td> <td><span>23,601,263</span></td> <td><span class="last">8%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.61}}</span></td> <td><span>15,058,658</span></td> <td><span>13,189,136</span></td><td><span class="last">14%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.62}}</span></td> <td><span>2,708,242</span></td> <td><span>2,185,515</span></td><td><span class="last">24%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.63}}</span></td> <td><span>1,193,473</span></td> <td><span>905,636</span></td><td><span class="last">32%</span></td></tr>
+			
+			<tr><td  colspan="2"><span class="first_space">{{section_data_db.64}}</span></td> <td><span>6,426,912</span></td> <td><span>7,320,976</span></td><td><span class="last negative_number">-12%</span></td></tr>
+			
+			<tr><td><span class="first">7%</span></td> <td><span class="table_subtitle">{{section_data_db.65}}</span></td> <td><span>4,655,543</span></td> <td><span>4,974,237</span></td> <td><span class="last negative_number">-6%</span></td></tr>
+			
+			<tr><td><span class="first">5%</span></td> <td><span class="table_subtitle">{{section_data_db.66}}</span></td> <td><span>3,523,298</span></td> <td><span>3,543,858</span></td> <td><span class="last negative_number">-1%</span></td></tr>
+			
+			<tr><td><span class="first">4%</span></td> <td><span class="table_subtitle">{{section_data_db.67}}</span></td> <td><span>2,886,496</span></td> <td><span>3,490,228</span></td> <td><span class="last negative_number">-17%</span></td></tr>
+			
+			<tr><td><span class="first">4%</span></td> <td><span class="table_subtitle">{{section_data_db.68}}</span></td> <td><span>3,559,779</span></td> <td><span>3,351,553</span></td> <td><span class="last">6%</span></td></tr>
+			
+			<tr class="table_results"><td colspan="2"><span class="table_title first">{{section_data_db.54}}</span></td><td><span>74,732,722</span></td><td><span>77,381,925</span></td><td><span>-3%</span></td></tr>
+		</table>
+	</div>
+	<div class="two_color_bar">
+		<div class="dark_color_bar">
+		</div>
+		<div class="container">
+			{{section_data_db.69}}
+		</div>
+	</div>
+</div>
+<div id="donativos" class="{% if tag in 'donativos,donations' %}visible{% else %}invisible{% endif %}">
+	<div class="container">
+		<h2>{{section_data_db.45}}</h2>
+		
+		<table id="resultados_donaciones">
+			<tr class="table_headers"><th></th> <th></th> <th>2013</th> <th>2012</th> <th>+/-</th></tr>
+			
+			<tr><td><span class="first">50%</span></td> <td><span class="table_subtitle">{{section_data_db.70}}</span></td> <td><span>21,572,871</span></td> <td><span>21,572,871</span></td> <td><span class="last">10%</span></td></tr>
+			
+			<tr><td><span class="first">22%</span></td> <td><span class="table_subtitle">{{section_data_db.71}}</span></td> <td><span>5,674,020</span></td> <td><span>5,674,020</span></td> <td><span class="last negative_number">-5%</span></td></tr>
+			
+			<tr><td><span class="first">16%</span></td> <td><span class="table_subtitle">{{section_data_db.73}}</span></td> <td><span>4,091,132</span></td> <td><span>3,216,369</span></td> <td><span class="last">27%</span></td></tr>
+			
+			<tr><td><span class="first">4%</span></td> <td><span class="table_subtitle">{{section_data_db.74}}</span></td> <td><span>2,956,163</span></td> <td><span>2,419,731</span></td> <td><span class="last">22%</span></td></tr>
+			
+			<tr><td><span class="first">1%</span></td> <td><span class="table_subtitle">{{section_data_db.75}}</span></td> <td><span>1,180,825</span></td> <td><span>1,670,825</span></td> <td><span class="last negative_number">-29%</span></td></tr>
+			
+			<tr><td><span class="first">4%</span></td> <td><span class="table_subtitle">{{section_data_db.76}}</span></td> <td><span>1,500,000</span></td> <td><span>1,500,000</span></td> <td><span class="last">0%</span></td></tr>
+			<!--
+			<tr><td><span class="first">4%</span></td> <td><span class="table_subtitle">{{section_data_db.76}}</span></td> <td><span>1,500,000</span></td> <td><span>1,500,000</span></td> <td><span class="last">0%</span></td></tr>
+			-->
+			<tr><td><span class="first">0%</span></td> <td><span class="table_subtitle">{{section_data_db.77}}</span></td> <td><span>-</span></td> <td><span>1,000,000</span></td> <td><span class="last negative_number">-100%</span></td></tr>
+			
+			<tr><td><span class="first">2%</span></td> <td><span class="table_subtitle">{{section_data_db.78}}</span></td> <td><span>1,045,785</span></td> <td><span>854,800</span></td> <td><span class="last">22%</span></td></tr>
+			
+			<tr class="table_results"><td colspan="2"><span class="table_title first">{{section_data_db.54}}</span></td><td><span>$ 38,028,462</span></td><td><span>$ 37,908,616</span></td><td><span>.32%</span></td></tr>
+			
+		</table>
+		
+		<p class="strong_text">{{section_data_db.79}}</p>
+		
+	</div>
+	<div class="two_color_bar">
+		<div class="dark_color_bar">
+		</div>
+		<div class="container">
+			{{section_data_db.80}}
+		</div>
+	</div>
+</div>
+<div id="recuperacion" class="{% if tag in 'recuperacion,recovery-rates' %}visible{% else %}invisible{% endif %}">
+	<div class="container">
+		<h2>{{section_data_db.81}}</h2>
+		
+		<table id="resultados_recuperacion">
+			<tr class="table_headers"><th></th><th>2013</th><th>2012</th></trh>
+			<tr><td><span class="table_title first">{{section_data_db.82}}</span></td><td><span>52%</span></td><td><span class="last">42%</span></td></tr>
+			<tr><td><span class="table_title first">{{section_data_db.83}}</span></td><td><span>0%</span></td><td><span class="last">0%</span></td></tr>
+			<tr class="no_border"><td><span class="table_title first">{{section_data_db.84}}</span></td><td><span>37%</span></td><td><span class="last">26%</span></td></tr>
+		</table>	
+			
+	</div>
+	<div class="two_color_bar">
+		<div class="dark_color_bar">
+		</div>
+		<div class="container">
+			{{section_data_db.85}}
+		</div>
+	</div>
+</div>
+<div id="proyectos" class="{% if tag in 'proyectos,projects' %}visible{% else %}invisible{% endif %}">
+	<div id="reporte_proyectos" class="container">
+		<h2>Proyectos</h2>
+		<div class="proyectos_left">
+			<h3><i>Observatorio de lesiones y enfermedades</i></h3>
+			<p>
+				<b><i>Objetivo:</i></b> Analizar la incidencia de accidentes y enfermedades, así como su distribución geográfica y temporal con el fin de desarrollar estrategias de prevención y atención de emergen- cias.
+			</p>
+			<h4><i>Logro</i></h4>
+			<p>
+				A través de observatorio de lesiones y enfermedades ha sido posible optimizar la asignación de unidades, tiempo de respuesta, adquisición de equipo y capacitación del personal.
+			</p>
+
+			
+		</div><div class="proyectos_right"></div>
+		<h3><i>Geo-localización de incidentes</i></h3>
+			<p>
+				<b><i>Objetivo</i></b>: Contar con un mapeo que permita visualizar y encontrar tendencias en la ubicación de llamados en la ciudad de Tijuana.
+			</p>
+			<h4><i>Logro</i></h4>
+			<p>
+				A través de la geo localización de incidentes vía Google Earth ha sido posible identificar cuáles son los lugares de la ciudad en los que se atienden mayormente pacientes por tipo trauma y enfermedad, permitiendo realizar recomendaciones en base a evidencias objetivas para atender las necesidades reales de la población.
+			</p>
+		<!--
+		<h2>{{section_data_db.86}}</h2>
+		<h3>{{section_data_db.87}}</h3>
+		<ul class="square_list">
+			{{section_data_db.88}}
+		</ul>
+		
+		<h3>{{section_data_db.89}}</h3>
+		<ul class="square_list">
+			{{section_data_db.90}}
+		</ul>
+
+		<h3>{{section_data_db.98}}</h3>
+		<p>
+			{{section_data_db.99}}
+		</p>
+		<br />
+		<h3>{{section_data_db.91}}</h3>
+		<ul class="square_list">
+			{{section_data_db.92}}
+		</ul>
+		-->
+	</div>
+	<div class="two_color_bar">
+		<div class="dark_color_bar">
+		</div>
+		<div class="container">
+			{{section_data_db.93}}
+		</div>
+	</div>
+</div>
+<div class="container">
+	{{section_data_db.94}}
+</div>
+{% endautoescape %}
+{% endblock %}

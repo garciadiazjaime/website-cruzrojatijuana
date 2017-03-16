@@ -1,0 +1,25 @@
+{% autoescape off %}
+	
+
+		<div class="container">
+			<p id="lang"><a href="/{{section_data.gral_info.section}}" title="Cambiar idioma a Español" class="{% if lang == 0 %}active{% endif %}">Esp</a>/<a href="/{{section_data.gral_info.section_lang}}" title="Change language to English" class="{% if lang == 1 %}active{% endif %}">Eng</a></p><div id="brand"><a href="/{{gral_info.logo_href}}" title="{{gral_info.logo_title}}"><img src="/static/images/logo.png"></a></div><p id="bloque_capacitacion"></p><ul class="social">
+				<li class="facebook first"><a href="{{gral_info.facebook_href}}" title="{{gral_info.facebook_title}}" target="_blank"></a></li><li class="twitter"><a href="{{gral_info.twitter_href}}" title="{{gral_info.twitter_title}}" target="_blank"></a></li><li class="youtube"><a href="{{gral_info.youtube_href}}" title="{{gral_info.youtube_title}}" target="_blank"></a></li>
+			</ul>
+		</div>
+	<div id="menu_wrapp">
+		{% if 'page_subtitle' in section_data.gral_info %} <h1>{{section_data.gral_info.page_subtitle}}</h1>
+	{% endif %}
+		<div class="container">
+			{{main_menu}}
+		</div>
+	</div>
+	
+	
+		<div id="hidden_menu">
+			<div class="container">
+				{{main_menu}}<ul class="social">
+						<li class="facebook first"><a href="{{gral_info.facebook_href}}" title="{{gral_info.facebook_title}}" target="_blank"></a></li><li class="twitter"><a href="{{gral_info.twitter_href}}" title="{{gral_info.twitter_title}}" target="_blank"></a></li><li class="youtube"><a href="{{gral_info.youtube_href}}" title="{{gral_info.youtube_title}}" target="_blank"></a></li>
+					</ul>
+			</div>
+		</div>
+{% endautoescape %}

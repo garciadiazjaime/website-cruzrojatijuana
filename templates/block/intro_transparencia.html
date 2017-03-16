@@ -1,0 +1,24 @@
+{% autoescape off %}
+<div id="transparencia_intro">
+	<div class="container">
+		{{section_data_db.96}}
+	</div>
+	<div id="transparencia_menu">
+		<div class="container">
+			<ul>
+				{% for row in sub_menu %}
+				<li class="{% if forloop.first %}first{% endif %} {% if tag == row.alt %}current{% endif %}"><a href="{{row.href}}" title="{{row.title}}" alt="{{row.alt}}">{{row.title}}</a></li>
+				{% endfor %}
+				<!--
+				<li class="first {% if tag in 'servicios-comunidad' %}current{% endif %}"><a href="/transparencia/servicios-comunidad" title="Servicios a la<br> comunidad" alt="servicios-comunidad">Servicios a la<br> comunidad</a></li>
+				<li class="{% if tag in 'ingresos-egresos' %}current{% endif %}"><a href="/transparencia/ingresos-egresos" title="Ingresos y egresos" alt="ingresos-egresos">Ingresos y egresos</a></li>
+				<li class="{% if tag in 'donativos' %}current{% endif %}"><a href="/transparencia/donativos" title="Donativos" alt="donativos">Donativos</a></li>
+				<li class="{% if tag in 'recuperacion' %}current{% endif %}"><a href="/transparencia/recuperacion" title="Recuperación" alt="recuperacion">Recuperación</a></li>
+				<li class="{% if tag in 'proyectos' %}current{% endif %}"><a href="/transparencia/proyectos" title="Proyectos" alt="proyectos">Proyectos</a></li>
+				<li class="{% if tag in 'ingresos-egresos' %}current{% endif %}"><a href="/donativos" title="Cómo ayudar">Cómo ayudar</a></li>
+			-->
+			</ul>
+		</div>
+	</div>
+</div>
+{% endautoescape %}

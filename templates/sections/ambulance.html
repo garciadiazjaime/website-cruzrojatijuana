@@ -1,0 +1,222 @@
+{% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="ambulancias_intro">
+	<div  class="container">
+		<h1>{{section_data.gral_info.title}}</h1>
+	</div>
+	<div id="ambulancias_intro_img"></div>
+</div>
+<div class="container">
+	<div id="acciones">
+		<div class="column half first">
+			<p class="big_text">{{section_data.gral_info.desc}}</p>
+		</div><div class="column half">
+			<div id="ambulancias_logros_slider">
+				<div class="slider_nav">
+					<a href="prev" title="prev" class="" id="news_prev"></a>
+					<a href="next" title="next" class="next" id="news_next"></a>
+				</div>						
+				<div class="slider_vert">
+					{% for row in section_data.gral_info.list %}
+					<div class="slider_frame">
+						<p>{{row}}</p>
+					</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="equipo">
+		<h2>{{section_data.equipo.title}}</h2>
+		<div class="column half first">
+			<p class="big_text">{{section_data.equipo.subtitle}}</p>
+			<ul class="square_list">
+				{% for row in section_data.equipo.list %}
+				<li><span>{{row}}</span></li>
+				{% endfor %}
+			</ul>
+		</div><div class="column half">
+			<div class="alignment_wrapp">
+				<div id="socorrismo_slider">
+					<div class="slider_nav">
+						<a href="prev" title="prev" class="" id="second_prev"></a>
+						<a href="next" title="next" class="next" id="second_next"></a>
+					</div>						
+					<div class="second_slider">
+						<div id="socorr_1" class="slider_frame"></div>
+						<div id="socorr_2" class="slider_frame"></div>
+						<div id="socorr_3" class="slider_frame"></div>
+						<div id="socorr_4" class="slider_frame"></div>
+						<div id="socorr_5" class="slider_frame"></div>
+					</div>
+				</div>
+				<p>{{section_data.equipo.desc}}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="two_color_bar">
+	<div class="dark_color_bar">
+	</div>
+	<div class="container">
+		<div class="column half first">
+			<a href="{{section_data.unidades.left.href}}" title="{{section_data.unidades.left.title}}..." class="horizontal_prev slider_horz_prev">{{section_data.unidades.left.title}}</a>
+		</div><div class="column half">			
+			<a href="{{section_data.unidades.right.href}}" title="{{section_data.unidades.right.title}}" class="horizontal_next slider_horz_next">{{section_data.unidades.right.title}}</a>
+		</div>
+	</div>
+</div>
+<div id="equipo_slider">
+	<div class="container">
+		<div class="slider_nav">
+			<a href="prev" title="prev" class="slider_horz_prev" id=""></a>
+			<a href="next" title="next" class="next slider_horz_next" id=""></a>
+		</div>
+	</div>
+	<div  class="concreto">
+		<div class="slider_horz">
+			<div id="equipo_materiales" class="slider_frame">
+				<div>
+					<div class="fondo">
+						<div class="container">
+							<div class="column two_third first">
+								<h2>{{section_data.unidades.left.title}}:</h2>
+							</div><div class="column third">
+								<ul class="square_list">
+									{% for row in section_data.unidades.left.list %}
+									<li id="{% if forloop.last %}localizador{% endif %}"><span>{{row}}</span></li>	
+									{% endfor %}
+								</ul>
+							</div>
+							<ul id="lista_el">
+								<li id="list_carro">1</li>
+								<li id="list_ferula">2</li>
+								<li id="list_mochila">3</li>
+								<li id="list_ventilador">4</li>
+								<li id="list_equipo_blanco">5</li>
+								<li id="list_equipo">6</li>
+								<li id="list_oxigeno">7</li>
+								<li id="list_accesorios">8</li>
+							</ul>
+							<div id="lista_elementos">
+								<ul>
+									<li id="list_carro_content" class="visible"><span class="ambulance_number">1</span><em>{{section_data.articulos_ambulancia.itm1}}</em></li>
+									<li id="list_ferula_content" class=""><span class="ambulance_number">2</span><em>{{section_data.articulos_ambulancia.itm2}}</em></li>
+									<li id="list_mochila_content" class=""><span class="ambulance_number">3</span><em>{{section_data.articulos_ambulancia.itm3}}</em></li>
+									<li id="list_ventilador_content" class=""><span class="ambulance_number">4</span><em>{{section_data.articulos_ambulancia.itm4}}</em></li>
+									<li id="list_equipo_blanco_content" class=""><span class="ambulance_number">5</span><em>{{section_data.articulos_ambulancia.itm5}}</em></li>
+									<li id="list_equipo_content" class=""><span class="ambulance_number">6</span><span class="ambulance_column">{{section_data.articulos_ambulancia.itm6}}
+										</span>
+									</li>
+									<li id="list_oxigeno_content" class=""><span class="ambulance_number">7</span><em>{{section_data.articulos_ambulancia.itm7}}</em></li>
+									<li id="list_accesorios_content" class=""><span class="ambulance_number">8</span><span class="ambulance_column">{{section_data.articulos_ambulancia.itm8}}
+										</span>	
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="equipo_unidades" class="slider_frame">
+				<div id="bases-ambulancia">
+					<div class="fondo">
+						<div class="container">
+							<h2>{{section_data.unidades.right.title}}</h2>
+							<hr>
+							<ul class="square_list">
+								{% for row in section_data.unidades.right.list %}
+								<li class="{% if forloop.first %}first{% endif %}"><span>{{row}}</span></li>	
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><!-- .concreto -->
+</div>
+<div id="bot_listado_unidades">
+	<div class="container">
+		<h2>{{section_data.listado.title}}</h2>
+	</div>
+</div>
+<div id="listado_unidades">
+	<div id="bloque_listado_unidades" class="container close invisible">
+		<div class="column third first">
+			<h3>{{section_data.listado.list_a.title}}</h3>
+			<ul class="square_list">
+				{% for row in section_data.listado.list_a.items %}
+				<li><span>{{row.title}}</span>
+					{% if 'children' in row %}
+					<ul class="square_list">  
+					{% for row in row.children %}
+						<li><span>{{row}}</span></li>
+					{% endfor %}
+					</ul>
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+		</div><div class="column third">
+			<h3>{{section_data.listado.list_b.title}}</h3>
+			<ul class="square_list">
+				{% for row in section_data.listado.list_b.items %}
+				<li><span>{{row.title}}</span>
+					{% if 'children' in row %}
+					<ul>  
+					{% for row in row.children %}
+						<li>{{row}}</li>
+					{% endfor %}
+					</ul>
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+		</div><div class="column third">
+			<h3>{{section_data.listado.list_c.title}}</h3>
+			<ul class="square_list">
+				{% for row in section_data.listado.list_c.items %}
+				<li><span>{{row.title}}</span>
+					{% if 'children' in row %}
+					<ul>  
+					{% for row in row.children %}
+						<li>{{row}}</li>
+					{% endfor %}
+					</ul>
+					{% endif %}
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="bases-ambulancia2" class="blue_container">
+	<div class="container">
+		<h2>{{section_data.bases.title}}</h2>
+		<div class="column half first">	
+			<ul class="square_list" id="nav_bases">
+				{% for row in section_data.bases.list %}
+				<li id="li_{{forloop.counter}}"><span>{{row}}</span></li>
+				{% endfor %}
+			</ul>
+			<p>{{section_data.bases.subtitle}}</p>
+		</div><div class="column half">
+			<div id="slider_bases">
+				<img src="/static/images/fe/slider_bases/base_calle11.jpg" alt="{{section_data.bases.alt}}" class="li_1">
+				<img src="/static/images/fe/slider_bases/base_florido.jpg" alt="{{section_data.bases.alt}}" class="li_2">
+				<img src="/static/images/fe/slider_bases/base_veteranos.jpg" alt="{{section_data.bases.alt}}" class="li_3">
+				<img src="/static/images/fe/slider_bases/base_playas.jpg" alt="{{section_data.bases.alt}}" class="li_4">
+				<img src="/static/images/fe/slider_bases/base_dorado.jpg" alt="{{section_data.bases.alt}}" class="li_5">
+				<img src="/static/images/fe/slider_bases/base_santafe.jpg" alt="{{section_data.bases.alt}}" class="li_6">
+				<img src="/static/images/fe/slider_bases/base_otay.jpg" alt="{{section_data.bases.alt}}" class="li_7">
+				<img src="/static/images/fe/slider_bases/base_central.jpg" alt="{{section_data.bases.alt}}" class="li_8">
+			</div>
+		</div>
+	</div>
+</div>
+{% include 'block/preparate.html' %}
+{% endautoescape %}
+{% endblock %}

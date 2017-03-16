@@ -1,0 +1,149 @@
+{
+    "timeline":
+    {
+        "headline":"1943",
+        "type":"default",
+        "startDate":"1943",
+        "text":"Sus antecedentes datan desde este año, en el que un grupo de tijuanenses comprometidos con su comunidad decidieron iniciar las gestiones para instalar en nuestra ciudad una Delegación de Cruz Roja. Testimonios fehacientes indican que algunos años antes, la comunidad había sido ya beneficiada con los servicios de la Institución, principalmente en lo que a emergencias se refiere, sin haber estado reconocida oficialmente",
+        "asset":
+        {
+            "media":"/static/images/timeline/CR-1943.jpg",
+            "credit":"",
+            "caption":""
+        },
+        "date": [
+            {
+                "startDate":"1944",
+                "headline":"Reconocida oficialmente por la Asociación Mexicana de la Cruz Roja entre los meses de marzo y abril.",
+                "text":"El primer Presidente Titular de la Delegación fue el Sr. Silverio I. Romero Irigoyen. El domicilio inicial donde se instauró la Delegación fue en un local contiguo al antiguo Palacio Municipal, entre las calles Segunda y Constitución; funcionando en esta dirección hasta 1964. Ahí se brindaron los servicios de ambulancia, urgencias médicas y farmacia.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1944.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1952",
+                "headline":"Por conducto de la Profesora Carmen Estrella",
+                "text":"Por conducto de la Profesora Carmen Estrella de Valencia se fundó la Escuela de Enfermería de la Cruz Roja, primera en su género en nuestra ciudad. Al mismo tiempo, y gracias a la colaboración de valiosas personas que participaron con la Profesora Valencia, se fundó la Cruz Roja de la Juventud, que realizó su labor en beneficio de la comunidad hasta mediados de los años setentas.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1952.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1964",
+                "headline":"La Delegación dice adiós",
+                "text":"La Delegación dice adiós a las instalaciones de Palacio Municipal, para trasladar su sede al edificio de la Calle 11, el cual fue inaugurado el 8 de mayo.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1964.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1968",
+                "headline":"Se inauguraron el segundo y tercer piso",
+                "text":"Se inauguraron el segundo y tercer piso del hospital. Los servicios brindados en este lugar incluían: ambulancias, urgencias médicas, banco de sangre, laboratorio, farmacia, rayos X, medicina interna, pediatría, cirugía y ginecología. Además del Comité de Juventud y la Escuela de Enfermería.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1968.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1977",
+                "headline":"Gracias a la labor realizada por el Sr. Efrén H. Cuellar",
+                "text":"Gracias a la labor realizada por el Sr. Efrén H. Cuellar, se fundó la Escuela de Socorristas No. 63 \"Comandante Lucio Onofre González\", que en la actualidad está representada por la Coordinación de Capacitación.<br />La parte activa de los socorros para casos de desastre de Tijuana, brindó su apoyo a la población durante las inundaciones de este mismo año y de 1980.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1977.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1981",
+                "headline":"Nuestra Delegación fue sede de la XVI Convención Nacional",
+                "text":"Nuestra Delegación fue sede de la XVI Convención Nacional de la Cruz Roja Mexicana, siendo Presidente del Consejo Nacional de Directores el Sr. José Barroso Chávez.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1981.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1983",
+                "headline":"La coordinación de Cruz Roja de la Juventud inició nuevamente actividades",
+                "text":"La coordinación de Cruz Roja de la Juventud inició nuevamente actividades, que involucraron a niños y jóvenes a participar como voluntarios de la Institución en programas de filosofía institucional y de servicio a la comunidad.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1983.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1985",
+                "headline":"Colaboración con la Cruz Roja Mexicana a las víctimas",
+                "text":"Colaboración con la Cruz Roja Mexicana a las víctimas del sismo en el D.F. y las costas de Jalisco, Michoacán y Guerrero.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1985.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1992",
+                "headline":"El rápido crecimiento de nuestra ciudad",
+                "text":"El rápido crecimiento de nuestra ciudad aunado a una mayor demanda de los servicios de urgencia por parte de la población, fue el motivo de que la sede de la Cruz Roja Mexicana Delegación Tijuana fuera trasladada a sus nuevas instalaciones, situadas en la tercera etapa de la Zona del Río. Sitio en el que se ubica el centro de trauma, considerado el segundo en calidad en lo que a instalaciones de Cruz Roja en México se refiere.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1992.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1993",
+                "headline":"Nuestro gran equipo de socorros para casos de desastre",
+                "text":"Nuestro gran equipo de socorros para casos de desastre brindó su apoyo durante la inundación que aquejo a la población.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1993.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"1994",
+                "headline":"Voluntarios de la Delegación participaron en las labores",
+                "text":"Voluntarios de la Delegación participaron en las labores de localización y búsqueda después de los terremotos que sacudieron la ciudad de Los Ángeles. Esta actividad fue parte de la ayuda que la Cruz Roja Mexicana brindó a la Sociedad Nacional de la Cruz Roja Americana.<br />Ese mismo año, se contó con la participación de un voluntario en el Curso Básico de Capacitación para Delegados, impartido conjuntamente por representantes del CICR y la Federación.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-1994.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            },
+            {
+                "startDate":"2004",
+                "headline":"El 11 de octubre se inauguró la primera etapa del Centro de Capacitación",
+                "text":"El 11 de octubre se inauguró la primera etapa del Centro de Capacitación y Base de Ambulancias en el antiguo edificio de la Calle 11.",
+                "asset":
+                {
+                    "media":"/static/images/timeline/CR-2004.jpg",
+                    "credit":"",
+                    "caption":""
+                }
+            }
+        ]
+    }
+}

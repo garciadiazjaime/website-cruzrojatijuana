@@ -1,0 +1,126 @@
+ {% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+	<div id="mision">
+		<div class="container">
+			<div class="column half first">
+				<h2>{{section_data.mision.title}}</h2>
+				<p>{{section_data.mision.desc}}</p>
+			</div><div class="column half">
+				<p id="mission_phrase">{{section_data.mision.slogan}}</p>
+			</div>
+		</div>
+	</div>
+	<div id="siete-principios-cruz-roja">
+		<div class="container">
+			<div class="column half first">
+				<h2>{{section_data.principios.title}}</h2>
+				<p class="big_text">{{section_data.principios.desc}}
+				</p>
+			</div><div class="column half">
+			</div>
+		</div>
+		<div id="principios_color"></div>	
+		<div id="bandera_principios"></div>
+		<div id="principios_list">
+			<ul class="container">
+				{% for row in section_data.principios.list %}
+				<li id="{{row.id}}">
+					{{row.title}}
+				</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div id="institucionalidad-transparencia" class="container">
+		<div class="column half first">
+			<h2>{{section_data.institucion.title}}</h2>
+			<p>{{section_data.institucion.desc}}</p>
+		</div><div class="column half">
+			<div id="{{section_data.institucion.img}}"></div>
+			<a href="/{{section_data.institucion.link_href}}"  title="{{section_data.institucion.link_title}}" class="plus_button">{{section_data.institucion.link_title}}</a>
+		</div>
+	</div>
+	<div id="equipo-trabajo" class="container">
+		<div class="column half first">
+			<h2>{{section_data.equipo.title}}</h2>
+			<p>{{section_data.equipo.desc}}</p>
+			<h3>{{section_data.equipo.subtitle}}</h3>
+			<div id="team_slider">
+				<div class="slider_nav">
+					<a href="prev" title="prev" class="" id="news_prev"></a>
+					<a href="next" title="next" class="next" id="news_next"></a>
+				</div>						
+				<div class="slider_vert">
+					<div id="team_1" class="slider_frame"></div>
+					<div id="team_2" class="slider_frame"></div>
+					<div id="team_3" class="slider_frame"></div>
+					<div id="team_4" class="slider_frame"></div>
+					<div id="team_5" class="slider_frame"></div>
+					<div id="team_6" class="slider_frame"></div>
+				</div>
+			</div>
+		</div><div class="column half">	
+				<h3 id="consejo">{{section_data.equipo.third_title}}</h3>
+				<div class="column half first">
+					<ul>
+						<li><span>{{section_data.equipo.list_a.title}}</span>
+							<ul class="square_list">
+								{% for row in section_data.equipo.list_a.items %}
+								<li><span>{{row}}</span></li>
+								{% endfor %}
+							</ul>
+						</li>	
+					</ul>
+				</div><div class="column half">
+					<ul>
+						<li><span>{{section_data.equipo.list_b.title}}</span>
+							<ul class="square_list">
+								{% for row in section_data.equipo.list_b.items %}
+								<li><span>{{row}}</span></li>
+								{% endfor %}
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+	<div id="voluntariado" class="container">
+		<div class="column half first">
+			<h2>{{section_data.voluntarios.title}}</h2>
+			<p>{{section_data.voluntarios.desc}}</p>
+			
+			<p>{{section_data.voluntarios.beneficios.title}}</p>
+			
+			<ul class="square_list">
+				{% for row in section_data.voluntarios.beneficios.list %}
+				<li><span>{{row}}</span></li>
+				{% endfor %}
+			</ul>
+			<h3>{{section_data.voluntarios.slogan}}</h3>
+		</div><div class="column half">
+			<p class="big_quote"><span>"</span>{{section_data.voluntarios.slogan_b}}</p>
+			<div id="voluntariado_sumate">
+				<a href="{{section_data.voluntarios.link.href}}" title="{{section_data.voluntarios.link.title}}" class="plus_button">{{section_data.voluntarios.link.title}}</a>
+			</div>
+			<div id="voluntariado_wrapp">
+				<h3>{{section_data.voluntarios.contacto.title}}</h3>
+				<p>{{section_data.voluntarios.contacto.tel}}<br>
+				<a href="mailto:{{section_data.voluntarios.contacto.mail}}" title="{{section_data.voluntarios.contacto.alt}}">{{section_data.voluntarios.contacto.mail}}</a></p>
+			</div>
+		</div>
+	</div><span id="historia"></span>
+	{% if not is_mobile %}
+	<div id="timeline_wrapp">
+		<div class="container">
+			<h2>{{section_data.historia.title}} 
+			<span class="small">{{section_data.historia.subtitle}}</span></h2>
+		</div>
+		<div id="timeline"></div>
+	</div>
+	{% endif %}
+	<p class="clear"></p>
+	{% include 'block/preparate.html' %}
+{% endautoescape %}
+{% endblock %}

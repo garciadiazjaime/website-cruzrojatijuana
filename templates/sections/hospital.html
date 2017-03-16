@@ -1,0 +1,88 @@
+{% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="hospital_intro">
+	<div  class="container">
+		<h1>{{section_data.gral_info.title}}</h1>
+	</div>
+	<div id="hospital_intro_img"></div>
+</div>
+<div id="trauma" class="container">
+	<div class="column half first">
+		<p>	
+			{{section_data.gral_info.desc}}
+		</p>
+	</div><div class="column half">
+		
+		<div id="trauma_slider">
+			<div class="slider_nav">
+				<a href="prev" title="prev" class="" id="news_prev"></a>
+				<a href="next" title="next" class="next" id="news_next"></a>
+			</div>						
+			<div class="slider_vert">
+				{% for row in section_data.lista_a %}
+				<div class="slider_frame">
+					<p>{{row}}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div><!--  #trauma -->
+<div id="servicios">
+	<div class="container">
+		<h2>{{section_data.servicios.title}}</h2>
+		<ul class="square_list">
+			{% for row in section_data.servicios.list_a %}
+			<li><span>{{row}}</span></li>
+			{% endfor %}
+		</ul><span id="medicos-especialistas"></span>
+		<h3>{{section_data.servicios.subtitle}}</h3>
+		<ul class="square_list">
+			{% for row in section_data.servicios.list_b %}
+			<li><span>{{row}}</span></li>
+			{% endfor %}
+		</ul>
+	</div>
+</div><!--  #servicios -->
+<div id="instalaciones" class="container">
+	<h2>{{section_data.instalaciones.title}}</h2>
+	<div id="instalaciones_slider">
+		<div class="slider_nav">
+			<a href="prev" title="prev" class="" id="second_prev"></a>
+			<a href="next" title="next" class="next" id="second_next"></a>
+		</div>						
+		<div class="second_slider">
+			<div id="inst_1" class="slider_frame"></div>
+			<div id="inst_2" class="slider_frame"></div>
+			<div id="inst_3" class="slider_frame"></div>
+			<div id="inst_4" class="slider_frame"></div>
+			<div id="inst_5" class="slider_frame"></div>
+		</div>
+	</div>
+	<div id="inst_sectores">
+	{% for row in section_data.instalaciones.lista %}<div class="column fourth {% if forloop.first %}first{% elif forloop.counter|divisibleby:4 %}last{% elif forloop.counter|divisibleby:5 %}first{% elif forloop.last %}last{% endif %}">{% if forloop.counter > 4 %}<hr class="light_gray">{% endif %}<h3>{{row.title}}</h3><p>{{row.desc}}</p></div>{% endfor %}
+	</div>
+</div><span id="banco-sangre"></span>
+<div class="blue_container">
+	<div class="container">
+		<div class="column half first">
+			<h2>{{section_data.banco.title}}</h2>
+			<p>{{section_data.banco.desc}}</p>
+			<p class="big_text">{{section_data.banco.slogan}}</p>
+			
+			<a href="{{section_data.banco.href}}" title="{{section_data.banco.link_title}}" class="plus_button" target="_blank">{{section_data.banco.link}}</a>
+		</div><div class="column half">
+			<div id="donar_sangre_slider">					
+				<div class="second_slider">
+					<div id="donar_sang_1" class="slider_frame"></div>
+					<div id="donar_sang_2" class="slider_frame"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% include 'block/preparate.html' %}
+{% endautoescape %}
+{% endblock %}

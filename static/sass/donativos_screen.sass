@@ -1,0 +1,358 @@
+#intro_donativos, .red_background
+	background: #d53230
+	color: #ffffff
+	margin: 0 0 50px
+	padding: 30px 0 0
+	
+	.line_decor	
+		background: #952925 
+		height: 12px
+		margin: 40px auto -40px
+		width: 300px
+		
+	
+	li
+		background: url(#{$img_fe}donativos_sprite.png) 30px 0  no-repeat
+		display: inline-block
+		@extend %asap
+		font-size: 27px
+		width: 34.33%
+
+	a
+		border-bottom: 14px solid #D53230
+		color: #ffffff
+		display: block
+		height: 50px
+		min-height: 33px
+		padding: 27px 10px 70px 140px
+
+		&:hover
+			border-bottom: 14px solid #952925
+			color: #ffffff
+		
+	#don_dinero
+		background-position: 35px 0
+		width: 31.33%
+		
+		&:hover
+			background-position: 23px -4930px
+		
+	#don_tiempo	
+		background-position: 18px -5320px
+		
+		&:hover
+			background-position: 30px -390px
+	
+	#don_especie
+		background-position: 30px -768px
+		
+		&:hover
+			background-position: 18px -5698px
+	
+	h1
+		color: #ffffff
+		@extend %asap_bold
+		font-size: 31px
+		letter-spacing: 0.04em
+		margin: 0
+		padding: 30px 0
+	
+/* ------------------- Benefactores ------------------- */
+#benefactores
+	h2
+		margin: 70px 0 30px
+
+#slider_benefactores
+	height: 217px
+	margin: 0 0 70px
+	overflow: hidden
+	padding: 0 0 0 130px
+	position: relative
+
+	div.slider_nav
+		border: none
+		width: 8%
+
+		a
+			background: url(#{$img_fe}vertical_slider_nav.png) 0 0  no-repeat
+			height: 30px
+
+
+			&:hover
+				background-position: 0 -51px
+
+
+		a.next
+			background: url(#{$img_fe}vertical_slider_nav.png) -54px 0   no-repeat
+			top: 50px
+
+
+			&:hover
+				background-position: -54px -51px
+
+	div.slider_screen
+		border: none
+		width: 850px
+		
+	div
+		width: 805px !important
+		
+		div.slider_frame
+			border: 1px solid #d1d1d1
+			display: inline-block
+			height: 106px
+			vertical-align: top
+			width: 265px !important
+
+			a
+				display: block
+				height: 100%
+				opacity: 1
+				text-align: center
+				@include transition(opacity 0.2s ease-in)
+
+				&:hover
+					opacity: .8
+				
+				span
+					background: url(#{$img_fe}logos_benefactores.jpg) 0 0 no-repeat
+					display: inline-block
+					height: 100%
+					line-height: 5000em
+					overflow: hidden
+					width: 218px
+
+	#benef_coca
+		span
+			background-position: 0 0
+
+	#benef_xolos
+		span
+			background-position: -217px 0
+
+
+	#benef_honda
+		span
+			background-position: -434px 0
+			
+	.slider_vert
+		height: 217px
+		width: 780px
+		
+.side_column, .main_column
+	display: inline-block
+	vertical-align: top
+	width: 22%
+	
+.side_column
+	margin-right: 3%
+	
+.main_column
+	width: 75%
+	
+	h2
+		background: url(#{$img_fe}donativos_sprite.png) left -2162px  no-repeat
+		border-bottom: 1px solid #868F97
+		@extend %asap_bold
+		min-height: 40px
+		padding: 10px 0 15px 65px
+		
+	h3
+		color: #6b6b6b
+		@extend %lato_bold
+		font-size: 14px
+
+	.big_text
+		@extend %lato_bold
+		font-size: 20px
+	
+	.two_third.first
+		width: 60.3%
+		
+	.third
+		margin-left: 5%
+
+#paypal_img, #international-community_img
+	background: url(#{$img_fe}donativos_sprite.png) left -3683px no-repeat
+	display: block
+	height: 70px
+	margin: 0 0 20px
+	
+#international-community_img
+	background-position: left -4047px
+
+#donaciones-linea
+	h2
+		background-position: left -2424px
+
+
+#donations_menu
+	background: #f7f7f7
+	border: 1px solid #d3d3d3
+	padding: 20px 0
+	width: 205px
+	z-index: 20
+	
+	
+	a
+		background: transparent
+		color: #4c4c4c
+		display: block
+		@extend %lato_bold
+		font-size: 10px
+		letter-spacing: .03em
+		padding: 0 15px
+		text-transform: uppercase
+		
+		&:hover
+			background: #e8e8e8
+			
+	span
+		background: url(#{$img_fe}donativos_sprite.png) left -1507px no-repeat
+		display: block
+		min-height: 30px
+		padding: 10px 0 10px 33px
+		
+	#donat_linea
+		span
+			background-position: left -1591px
+			
+	#donat_cuenta	
+		span
+			background-position: left -1675px
+			
+	#donat_voluntariado	
+		span
+			background-position: left -1778px
+			
+	#donat_especie
+		span
+			background-position: left -1885px
+			
+	#donat_voluntariado	
+		span
+			border-top: 1px solid #969696
+			border-bottom: 1px solid #969696
+	
+	
+	#donat_voluntariado, #donat_especie
+		span
+			min-height: 19px
+			padding-top: 11px
+
+#nota_deducibles
+	background: url(#{$img_fe}donativos_sprite.png) left -1170px no-repeat
+	color: #d53230
+	min-height: 35px
+	padding: 20px 0 30px 260px
+	
+#donaciones-linea
+	a
+		font-size: 12px
+		
+	a.plus_button
+		font-size: 10px
+		
+#deposito-cuenta-bancaria
+	h2
+		background-position: left -2739px
+		
+	.two_third
+		ul
+			margin-left: 6px
+			
+	.third
+		p.square_bullet
+			margin-left: 5px
+		
+#deposito-cuenta-bancaria
+	color: #6b6b6b
+	@extend %lato_bold
+	letter-spacing: .03em
+	line-height: 1.3em
+	
+	p, ul
+		margin-left: 20px
+	
+	.two_third.first
+		width: 63.3%
+		
+	.third
+		margin-left: 2%
+	
+		h3
+			margin-left: -3px
+	
+	.column
+		border-left: 1px solid #868f97
+		padding: 0 0 50px 2%
+	
+	.column.first
+		border-left: none
+
+	h3
+		background: url(#{$img_fe}donativos_sprite.png) 20px -4326px no-repeat
+		border-bottom: 1px solid #868F97
+		color: #000
+		margin-left: -13px
+		min-height: 20px
+		padding: 7px 0 5px 70px
+		
+	#mx_header
+		background-position: 30px -4326px
+		padding-left: 80px
+	
+	#us_header
+		background-position: 20px -4666px
+	
+	li	
+		display: inline-block
+		margin-bottom: 10px
+		vertical-align: top
+		width: 47%
+		
+	li.square_bullet
+		padding: 0 0 0 3%
+		
+#tiempo
+
+	h2
+		background-position: left -3017px
+	
+	strong
+		color: #323232
+		
+	p
+		strong
+			color: #6b6b6b
+	
+	a.plus_button
+		margin-bottom: 30px
+		
+	p.large_quote
+		margin: 0 0 40px
+		
+	h3
+		margin-bottom: -10px
+		
+#especie
+	h2
+		background-position: left -3362px
+
+	a.plus_button
+		margin-bottom: 10px
+		
+	h3
+		margin-bottom: -10px
+
+.red_phrase
+	color: #d53230
+	@extend %asap_italic
+	font-size: 32px
+	
+.donativos
+	ul.square_list
+		margin-left: 15px
+		
+	.small
+		font-size: 13px

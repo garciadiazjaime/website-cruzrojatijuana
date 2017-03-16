@@ -1,0 +1,113 @@
+ {% extends "layout/base.html" %}
+
+{% block site_wrapper %}
+{% autoescape off %}
+<div id="intro_contacto">
+	<div id="map_delegacion" class="visible" >
+	</div>
+</div>
+<div class="container">
+	<div id="map_nav">
+		<div id="delegacion" class="column half first collapse">
+			
+			<p>{{section_data_db.0}}</p>
+		</div><div  id="capacitacion" class="column half collapse">
+			<p>{{section_data_db.1}}</p>
+		</div>
+	</div>
+	<div class="column half first">
+		<h1>{{section_data_db.2}}</h1>
+	</div><div class="column half">
+		<p id="contact_066">{{section_data_db.48}} <span> 066</span></p>
+	</div>
+	
+	<div class="column half first">
+		<h2 class="locacion">{{section_data_db.3}}</h2>
+		{{section_data_db.4}}
+		
+		{{section_data_db.5}}
+		
+		<h2>{{section_data_db.6}}</h2>
+		
+		<ul id="directorio_acordeon">
+			<li><h3>{{section_data_db.7}}</h3>
+				<div>
+					{{section_data_db.8}}
+				</div>
+			</li>
+			<li>{{section_data_db.9}}</li>
+			<li>{{section_data_db.10}}</li>
+			<li>{{section_data_db.11}}</li>
+			<li>{{section_data_db.12}}</li>
+			<li>{{section_data_db.13}}</li>
+			<li>{{section_data_db.14}}</li>
+			<li>{{section_data_db.15}}</li>
+			<li>{{section_data_db.16}}</li>
+			<li>{{section_data_db.17}}</li>
+			<li>{{section_data_db.18}}</li>
+			<li>{{section_data_db.19}}</li>
+			<li>{{section_data_db.20}}</li>
+			<li>{{section_data_db.21}}</li>
+			<li>{{section_data_db.22}}</li>
+			<li>{{section_data_db.44}}</li>
+			<li>{{section_data_db.45}}</li>
+			<li>{{section_data_db.46}}</li>
+			<li>{{section_data_db.47}}</li>
+		</ul>
+		
+	</div><div class="column half">
+		<h2 class="locacion">{{section_data_db.23}}</h2>
+		<p>{{section_data_db.24}}<br>
+		(664) 687.45.20  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    (664) 684.98.26</p>
+
+		<p>{{section_data_db.25}}<br>
+		{{section_data_db.26}}</p>
+		
+		{{section_data_db.27}}
+		
+		<h2>{{section_data_db.28}}</h2>
+		<p>{{section_data_db.29}}</p>
+
+		<form method="post" action="#" id="contact_form">
+			{% csrf_token %}
+			<label id="lab_name">{{section_data_db.30}}</label>
+			<input type="text" id="name" name="name" lang="es" class="custom_textbox" />
+			
+			<label id="lab_name">{{section_data_db.31}}</label>
+			<input type="email" id="email" name="email" lang="es" class="custom_textbox" />
+			
+			<label id="lab_name">{{section_data_db.32}}</label>
+			<input type="tel" id="phone" name="phone"  lang="es" class="custom_textbox" />
+			
+			<label id="lab_name">{{section_data_db.33}}</label>
+			<input type="text" id="asunto" name="asunto" lang="es" class="custom_textbox" />
+			
+			<label id="lab_name">{{section_data_db.34}}</label>
+			<textarea id="message" name="message"  class="custom_textarea" lang="es"></textarea>
+			<p id="msg">{{section_data_db.35}}</p>
+			<input type="submit"  class="custom_submit" value="{{section_data_db.36}}" />			
+		</form>
+		
+		<div id="datos_voluntario">
+			<h3>{{section_data_db.37}}</h3>
+			<p><strong>{{section_data_db.38}}</strong>
+			<span>{{section_data_db.39}}</span><br><br>
+
+			{{section_data_db.40}}<br><br>
+
+			{{section_data_db.41}}
+		</div>
+	</div>
+	<h2 class="no_border">{{section_data_db.42}}</h2>
+</div>
+<div class="red_background">
+	<div class="container">
+		<ul>
+			{{section_data_db.43}}
+		</ul>
+	</div>
+</div>
+
+{% include 'block/preparate.html' %}
+{% endautoescape %}
+{% endblock %}

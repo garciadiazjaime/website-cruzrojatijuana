@@ -1,0 +1,187 @@
+@import "setup.sass"
+
+/* ********* BLOG ******************* */
+#brand
+	img
+		@include box-shadow(none)
+		
+#menu_wrapp, #general_menu, #hidden_menu
+	a:hover
+		text-decoration: none
+		
+.left_column, .right_column
+	display: inline-block
+	vertical-align: top
+
+.left_column
+	margin: 0 5% 0 0
+	width: 70%
+	
+.right_column
+	width: 25%
+
+.form-actions
+	background: transparent
+	padding: 19px 20px 20px 10px
+
+.blog-list-detail, .unstyled.tags
+	color: #DD433C
+
+
+
+.unstyled
+	margin: 0 0 20px
+
+	a
+		color: #7f7f7f
+		@extend %lato_bold
+		font-size: 14px
+		letter-spacing: .04em
+
+	li
+		line-height: 1.1em
+
+.panel
+	background: #fcfcfc
+	border: none
+	@include box-shadow(-2px 1px 2px #f9f9f9 inset)
+	
+	h6
+		color: #dd433c
+		line-height: 1.1em
+
+.control-group 
+	label
+		font-weight: normal
+		
+		
+input.btn-primary
+	background: #f7f7f7 url(#{$img_fe}input_arrow.png) right center no-repeat
+	border: 1px solid #d3d3d3
+	border-bottom-width: 2px
+	@include box-shadow(none)
+	color: #606060
+	display: block
+	@extend %lato_bold
+	font-size: 10px
+	margin: 0
+	padding: 11px 70px 11px 10px
+	text-transform: uppercase
+	@include transition(none)
+	
+	&:hover
+		background-color: lighten(#f7f7f7, 10)
+		background-position: right center 
+		color: #606060
+
+.blog_news
+
+	h1
+		background: #4c4c4c
+		color: #fff
+		@extend %asap_bold
+		font-size: 33px
+		padding: 30px 0
+		
+		span
+			display: block
+			margin: 0 auto
+			width: 946px
+			
+		a
+			color: #fff
+			
+			&:hover
+				cursor: pointer
+				text-decoration: none
+
+	h2
+		color: #2b3e54
+		
+		a
+			color: #2b3e54
+			
+			&:hover
+				color: lighten(#2b3e54, 10)
+				text-decoration: none
+				
+			
+	h3
+		color:  #606060
+		@extend %lato
+		font-size: 14px
+		letter-spacing: .04em
+		margin: 0
+		text-transform: uppercase
+		
+	h6
+		color: #dd433c
+		font-weight: normal
+		
+		a
+			color: #c63a34
+			@extend %lato_bold
+			
+			
+			&:hover
+				color: lighten(#c63a34, 10)
+				text-decoration: none
+	
+	
+	#footer_donaciones
+		.third
+			line-height: 5000em
+			margin: 0
+			
+		.two_third
+			padding-top: 3px
+			
+			
+	#sitemap
+		padding: 56px 0 0
+			
+#footer.blog_news
+	line-height: 1em
+
+
+	ul
+		font-size: 11px
+		margin-left: 0
+	
+	a
+		line-height: 1em
+		margin: 0 0 5px
+		
+		
+		&:hover
+			text-decoration: none
+			
+	#other_links 
+		ul.social
+			margin-top: 0
+
+a.read_more
+	background: #f7f7f7 url(#{$img_fe}plus_symbol.png) right center no-repeat
+	border: 1px solid #d3d3d3
+	border-bottom-width: 2px
+	color: #4c4c4c
+	display: inline-block
+	@extend %lato_bold
+	font-size: 10px
+	letter-spacing: 0.03em
+	line-height: 1em
+	min-width: 140px
+	padding: 11px 35px 11px 12px
+	text-decoration: none
+	text-transform: uppercase
+	
+	&:hover
+		background-color: #d53230
+		border-color: #d53230
+		color: #ffffff
+		text-decoration: none
+		
+.blog_news
+	.left_column
+		img
+			max-width: 100%

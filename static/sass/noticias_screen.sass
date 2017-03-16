@@ -1,0 +1,166 @@
+#intro_noticias
+	background: #4c4c4c
+	color: #ffffff
+	margin: 0 0 70px
+	padding: 40px 0
+	
+	h1, h2
+		color: #ffffff
+		@extend %asap_bold
+		font-size: 33px
+		letter-spacing: 0.03em
+		margin-bottom: 0
+		margin-top: 0
+		
+.main_news_column, .side_data_column, .news_block, .news_data ,.news_body, .news_full
+	display: inline-block
+	vertical-align: top
+	
+.main_news_column
+	margin: 0 2% 0 0
+	width: 78%
+	
+.side_data_column
+	margin-top: 8px
+	width: 20%
+	
+.news_block
+	h2, h1
+		color: #2b3e54
+		@extend %asap
+		font-size: 33px
+		letter-spacing: 0.04em
+		line-height: 1.3em
+		margin: 0 0 20px
+		
+	a
+		color: #2b3e54
+		
+		&:hover
+			color: lighten(#2b3e54, 10)
+
+.news_data p, .side_data_column h3
+	margin-top: 0
+
+.news_block
+	margin:  0 0 70px
+
+.news_data
+	margin: 8px 5% 0 0
+	width: 18.5%
+	
+	.date
+		@extend %asap
+		font-size: 23px
+		margin: 0 0 35px
+		text-transform: uppercase
+	
+	.author
+		font-size: 14px
+		margin: 0 0 25px
+		
+		span
+			display: block
+			
+	.category
+		color: #dd433c
+		display: block
+		@extend %lato_bold
+		font-size: 14px
+		margin: 0 0 80px
+		
+		&:hover
+			color: lighten(#dd433c, 10) 
+	
+.news_body, .news_full
+	width: 73.5%
+	
+	p
+		text-align: justify
+		
+	img
+		margin: 50px 0
+		max-width: 538px
+	
+.social_share
+	ul
+		li.first
+			margin-left: 0
+
+		li
+			display: inline-block
+			margin-left: 10px
+
+			a
+				background: url(../images/social_sprite.png) 0 0 no-repeat
+				display: block
+				height: 20px
+				line-height: 50000em
+				overflow: hidden
+				width: 21px
+
+				&:hover
+					background-position: 0 -64px
+
+		.twitter
+			a
+				background-position: -52px 0
+
+				&:hover
+					background-position: -52px -64px
+					
+.side_data_column
+	
+	h3
+		color: #606060
+		@extend %lato
+		font-size: 14px
+		text-transform: uppercase
+		
+#category_list
+	color: #606060
+	@extend %lato_bold
+	font-size: 13px
+	margin: 0 0 60px
+	
+	li
+		margin: 0 0 20px
+		
+	a
+		color: #7f7f7f
+		
+		&:hover
+			color: lighten(#7f7f7f, 10)
+			
+#archive_list
+	color: #dd433c
+	@extend %lato_bold
+	font-size: 13px
+
+#news_nav
+	a 
+		background: url(#{$img_fe}horizontal_nav.png) right -755px no-repeat
+		display: inline-block
+		padding:  5px 4% 10px 0
+		text-align: right
+		vertical-align: top
+		width: 46%
+		
+	a.first
+		background-position: left -608px
+		padding:  5px 0 10px 4%
+		text-align: left
+		
+		
+.breadcrumb
+	background: transparent
+	margin: 20px 0 0
+	padding: 0
+	width: 70%
+	
+	li.active
+		color: #2B3E54
+		@extend %asap
+		font-size: 31px
+		letter-spacing: 0.05em
+		line-height: 0.95em
