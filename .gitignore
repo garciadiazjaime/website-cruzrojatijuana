@@ -1,6 +1,10 @@
-*.pyc
-*.pyo
-*.db
 *.DS_Store
 .coverage
 .sass-cache
+*.py[co]
+*.sw[po]
+*.bak
+*.orig
+*~
+.project
+.pydevproject
