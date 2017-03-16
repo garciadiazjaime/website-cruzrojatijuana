@@ -107,6 +107,10 @@ USE_TZ = True
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = "es-MX"
 
+import os
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 # A boolean that turns on/off debug mode. When set to ``True``, stack traces
 # are displayed for error pages. Should always be set to ``False`` in
 # production. Best set to ``True`` in local_settings.py
@@ -160,11 +164,11 @@ DATABASES = {
         # Add "postgresql_psycopg2", "mysql", "sqlite3" or "oracle".
         "ENGINE": "django.db.backends.sqlite3",
         # DB name or path to database file if using sqlite3.
-        "NAME": "db2.sqlite",
+        "NAME": os.path.join(BASE_DIR, "db2.sqlite"),
         # Not used with sqlite3.
-        "USER": "user_cr",
+        "USER": "",
         # Not used with sqlite3.
-        "PASSWORD": "pssw_cr",
+        "PASSWORD": "",
         # Set to empty string for localhost. Not used with sqlite3.
         "HOST": "",
         # Set to empty string for default. Not used with sqlite3.
@@ -198,7 +202,8 @@ STATIC_URL = "/static/"
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.join(PROJECT_ROOT, STATIC_URL.strip("/"))
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+print "STATIC_ROOT", STATIC_ROOT
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -207,17 +212,16 @@ MEDIA_URL = STATIC_URL + "media/"
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, *MEDIA_URL.strip("/").split("/"))
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/media')
 
 # Package/module name to import the root urlpatterns from for the project.
-ROOT_URLCONF = "urls"
+ROOT_URLCONF = "project.urls"
 
 # Put strings here, like "/home/html/django_templates"
 # or "C:/www/django/templates".
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
-TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, "templates"),)
-
+TEMPLATE_DIRS = (os.path.join(BASE_DIR, 'templates'),)
 
 ################
 # APPLICATIONS #
@@ -332,18 +336,6 @@ DEBUG_TOOLBAR_CONFIG = {"INTERCEPT_REDIRECTS": False}
 # }
 
 ALLOWED_HOSTS = '*'
-##################
-# LOCAL SETTINGS #
-##################
-
-# Allow any settings to be defined in local_settings.py which should be
-# ignored in your version control system allowing for settings to be
-# defined per machine.
-try:
-    from local_settings import *
-except ImportError:
-    pass
-
 
 ####################
 # DYNAMIC SETTINGS #
@@ -361,3 +353,5 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+TINYMCE_JS_ROOT = "tiny_mce"
